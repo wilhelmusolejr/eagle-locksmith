@@ -23,6 +23,7 @@ import Button from "@/components/Button";
 import SectionHeader from "@/components/SectionHeader";
 import ServiceCard from "@/components/ServiceCard";
 import AdvancedItem from "@/components/AdvancedItem";
+import SectionHeading from "@/components/SectionHeading";
 
 export default function Home() {
   let servicesList = [
@@ -184,9 +185,10 @@ export default function Home() {
         <div className="container text-white">
           {/* text */}
           <div className="text-center text">
-            <h2 className="text-4xl font-semibold uppercase color-primary">
+            <SectionHeading>
               Why choose Eagle Locksmith Services?
-            </h2>
+            </SectionHeading>
+
             <p className="pt-5 text-gray-300">
               Whether you need a quick lock repair, a full security upgrade, or
               new lock installations, Eagle Locksmith Services has you covered.
