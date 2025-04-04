@@ -17,6 +17,7 @@ import Image from "next/image";
 import Icon from "@/components/Icon";
 import Logo from "@/components/Logo";
 import Button from "@/components/Button";
+import SectionHeader from "@/components/SectionHeader";
 
 export default function Home() {
   return (
@@ -188,17 +189,13 @@ export default function Home() {
       {/* LIST SERVICES */}
       <div className="px-5 py-32 parent">
         {/* text */}
-        <div className="text-center text">
-          <p className="font-medium tracking-wide text-orange-400 uppercase">
-            Trusted Eagle Locksmith
-          </p>
-          <h2 className="text-4xl font-bold uppercase ">Our services</h2>
-          <p className="py-5">
-            We a provide advanced security solutions and a broad spectrum of
-            innovative security product and services for commercial and
-            residential customers.
-          </p>
-        </div>
+        <SectionHeader
+          subtitle={"Trusted Eagle Locksmith"}
+          title="Our services"
+          description={
+            "We a provide advanced security solutions and a broad spectrum of innovative security product and services for commercial and residential customers."
+          }
+        />
 
         <div className="flex flex-col gap-10">
           {/* card */}
