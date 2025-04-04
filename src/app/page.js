@@ -24,6 +24,7 @@ import SectionHeader from "@/components/SectionHeader";
 import ServiceCard from "@/components/ServiceCard";
 import AdvancedItem from "@/components/AdvancedItem";
 import SectionHeading from "@/components/SectionHeading";
+import BannerItem from "@/components/BannerItem";
 
 export default function Home() {
   let servicesList = [
@@ -155,9 +156,7 @@ export default function Home() {
           </div>
           {/* right */}
           <div className="">
-            <h2 className="text-4xl font-bold uppercase color-primary">
-              Eagle locksmith services
-            </h2>
+            <SectionHeading>Eagle locksmith services</SectionHeading>
             <p className="pt-2 font-medium text-blue-700">
               Get the best quality security solutions for all your lock and
               key-related issues with us in Maryland, DC And Virginia.
@@ -273,25 +272,15 @@ export default function Home() {
       {/* BANNER */}
       <div className="px-5 py-24 my-24 text-center text-white bg-black bsad">
         <div className="container relative z-10">
-          <h2 className="text-4xl font-bold uppercase ">
+          <SectionHeading>
             Trusted and affordable locksmith services in the DMV area
-          </h2>
+          </SectionHeading>
           <div className="flex flex-col items-center justify-center gap-1 my-10">
             {/* check card */}
-            <div className="flex items-center w-48 gap-3 ">
-              <FontAwesomeIcon icon={faCheck} className="w-7 text-orange" />
-              <h2 className="">Quick</h2>
-            </div>
-            {/* check card */}
-            <div className="flex items-center w-48 gap-3 ">
-              <FontAwesomeIcon icon={faCheck} className="w-7 text-orange" />
-              <h2 className="">Dependable</h2>
-            </div>
-            {/* check card */}
-            <div className="flex items-center w-48 gap-3 ">
-              <FontAwesomeIcon icon={faCheck} className="w-7 text-orange" />
-              <h2 className="">Cost-effective</h2>
-            </div>
+            <BannerItem icon={faCheck} title="Quick" />
+            <BannerItem icon={faCheck} title="Reliable" />
+            <BannerItem icon={faCheck} title="Dependable" />
+            <BannerItem icon={faCheck} title="Cost-effective" />
           </div>
 
           <p className="font-light">
@@ -387,7 +376,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-5 mt-10">
             {advancedSecurityList.map((item, index) => (
-              <AdvancedItem key={index} paragraph={item} />
+              <AdvancedItem key={index} icon={faCheckDouble} paragraph={item} />
             ))}
           </div>
         </div>
