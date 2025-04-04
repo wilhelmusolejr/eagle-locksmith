@@ -14,6 +14,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import Image from "next/image";
+import Icon from "@/components/Icon";
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
         <div className="p-5 mini-header">
           <div className="text-center ">
             <div className="flex items-center justify-center gap-2 pb-2">
-              <FontAwesomeIcon icon={faPhone} className="w-5 text-orange-400" />
+              <Icon icon={faPhone} className="w-5 text-orange-400" />
               <p className="font-medium">+1 (844) 411-5625</p>
             </div>
 
@@ -55,7 +56,7 @@ export default function Home() {
               </div>
 
               {/* BAR */}
-              <FontAwesomeIcon icon={faBars} className="text-white w-7" />
+              <Icon icon={faBars} className="w-7 " />
             </div>
           </nav>
 
@@ -148,10 +149,7 @@ export default function Home() {
             <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl">
               {/* icon */}
               <div className="flex items-center justify-center">
-                <FontAwesomeIcon
-                  icon={faClock}
-                  className="text-orange-400 w-15"
-                />
+                <Icon icon={faClock} className="text-orange-400 w-15" />
               </div>
 
               <div className="">
