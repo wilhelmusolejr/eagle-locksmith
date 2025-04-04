@@ -16,6 +16,7 @@ import {
 import Image from "next/image";
 import Icon from "@/components/Icon";
 import Logo from "@/components/Logo";
+import Button from "@/components/Button";
 
 export default function Home() {
   return (
@@ -44,9 +45,7 @@ export default function Home() {
 
               {/* CTA */}
               <div className="cta">
-                <button className="p-5 font-bold uppercase bg-red-700 rounded-md btn btn-primary ">
-                  Get A Quote
-                </button>
+                <Button>Get A Quote</Button>
               </div>
 
               {/* BAR */}
