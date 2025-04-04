@@ -25,6 +25,7 @@ import ServiceCard from "@/components/ServiceCard";
 import AdvancedItem from "@/components/AdvancedItem";
 import SectionHeading from "@/components/SectionHeading";
 import BannerItem from "@/components/BannerItem";
+import LabelInput from "@/components/LabelInput";
 
 export default function Home() {
   let servicesList = [
@@ -387,14 +388,12 @@ export default function Home() {
         <div className="container text-white">
           {/* text */}
           <div className="text-center text">
-            <h2 className="text-4xl font-semibold uppercase color-primary">
-              Get in touch with us
-            </h2>
+            <SectionHeading>Get in touch with us</SectionHeading>
 
             <div className="pt-10 text-left">
-              <h2 className="text-2xl font-semibold text-orange-400 capitalized color-primary">
+              <h3 className="text-2xl font-semibold text-orange-400 capitalized color-primary">
                 We&apos;re here to help you!
-              </h2>
+              </h3>
               <p className="pt-5 text-gray-300">
                 Whether you need a quick lock repair, a full security upgrade,
                 or new lock installations, Eagle Locksmith Services has you
@@ -407,39 +406,29 @@ export default function Home() {
           <div className="">
             <form className="flex flex-col gap-5 mt-10">
               {/* FULL NAME */}
-              <div className="flex flex-col gap-2">
-                <label htmlFor="" className="font-medium uppercase ">
-                  Full name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="p-3 text-gray-900 bg-white rounded-md input"
-                />
-              </div>
+              <LabelInput
+                type="text"
+                placeholder="John Doe"
+                label="Full name"
+                id="full_name"
+              />
 
               {/* EMAIL */}
-              <div className="flex flex-col gap-2">
-                <label htmlFor="" className="font-medium uppercase ">
-                  Full name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="p-3 text-gray-900 bg-white rounded-md input"
-                />
-              </div>
-
-              <input
+              <LabelInput
                 type="email"
-                placeholder="Your Email"
-                className="p-3 text-gray-900 bg-white rounded-md input"
+                placeholder="john.doe@gmail.com"
+                label="Email"
+                id="email"
               />
-              <input
+
+              {/* PHONE */}
+              <LabelInput
                 type="text"
-                placeholder="Your Phone Number"
-                className="p-3 text-gray-900 bg-white rounded-md input"
+                placeholder="01-234-5678"
+                label="Phone Number"
+                id="phone"
               />
+
               <textarea
                 rows={5}
                 placeholder="Your Message"
