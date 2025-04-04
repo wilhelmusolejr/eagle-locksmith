@@ -10,7 +10,10 @@ import {
   faLocationPin,
   faPhone,
   faStar,
+  faExclamationTriangle,
   faWallet,
+  faCar,
+  faVault,
 } from "@fortawesome/free-solid-svg-icons";
 
 import Image from "next/image";
@@ -18,8 +21,52 @@ import Icon from "@/components/Icon";
 import Logo from "@/components/Logo";
 import Button from "@/components/Button";
 import SectionHeader from "@/components/SectionHeader";
+import ServiceCard from "@/components/ServiceCard";
 
 export default function Home() {
+  let servicesList = [
+    {
+      image_path: "/images/services/commercial.jpg",
+      image_alt: "Commercial image",
+      icon: faBuilding,
+      title: "Commercial",
+      description:
+        "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
+    },
+    {
+      image_path: "/images/services/residential.jpg",
+      image_alt: "Residential image",
+      icon: faHome,
+      title: "Residential",
+      description:
+        "Lockout service, lock repair and installation, rekeying, security audits, and more.",
+    },
+    {
+      image_path: "/images/services/emergency.jpg",
+      image_alt: "Emergency image",
+      icon: faExclamationTriangle,
+      title: "Emergency",
+      description:
+        "Lockout service, lock repair and installation, rekeying, security audits, and more.",
+    },
+    {
+      image_path: "/images/services/automotive.jpg",
+      image_alt: "Automotive image",
+      icon: faCar,
+      title: "Automotive",
+      description:
+        "We provide a wide range of automotive locksmith services, including lock repairs, installations, and security upgrades.",
+    },
+    {
+      image_path: "/images/services/safe.jpg",
+      image_alt: "Safe image",
+      icon: faVault,
+      title: "Safe",
+      description:
+        "We provide a wide range of safe locksmith services, including lock repairs, installations, and security upgrades.",
+    },
+  ];
+
   return (
     <>
       <header>
@@ -199,72 +246,16 @@ export default function Home() {
 
         <div className="flex flex-col gap-10">
           {/* card */}
-          <div className="rounded-lg shadow bg-orange">
-            {/* image */}
-            <div className="relative w-full h-48">
-              {/* Image */}
-              <Image
-                src="/images/commercial.jpg"
-                fill
-                alt="Example"
-                className="absolute inset-0 object-cover w-full h-full rounded-t-lg"
-              />
-
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black rounded-t-lg opacity-40 mix-blend-multiply"></div>
-            </div>
-            {/* text */}
-            <div className="relative p-5 text-white ">
-              {/* icon */}
-              <div className="flex absolute top-[-50px] items-center justify-center w-20 h-20 p-5 bg-white rounded-lg ">
-                <FontAwesomeIcon
-                  icon={faBuilding}
-                  className="text-orange-400 w-7"
-                />
-              </div>
-              <h3 className="my-5 text-2xl font-semibold uppercase">
-                Commercial
-              </h3>
-              <p className="text-left text-gray-100">
-                We provide a wide range of commercial locksmith services,
-                including lock repairs, installations, and security upgrades.
-              </p>
-            </div>
-          </div>
-
-          {/* card */}
-          <div className="rounded-lg shadow bg-orange">
-            {/* Image */}
-            <div className="relative w-full h-48">
-              {/* Image */}
-              <Image
-                src="/images/residential.jpg"
-                fill
-                alt="Example"
-                className="absolute inset-0 object-cover w-full h-full rounded-t-lg"
-              />
-
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black rounded-t-lg opacity-40 mix-blend-multiply"></div>
-            </div>
-            {/* text */}
-            <div className="relative p-5 text-white ">
-              {/* icon */}
-              <div className="flex absolute top-[-50px] items-center justify-center w-20 h-20 p-5 bg-white rounded-lg ">
-                <FontAwesomeIcon
-                  icon={faHome}
-                  className="text-orange-400 w-7"
-                />
-              </div>
-              <h3 className="my-5 text-2xl font-semibold uppercase">
-                Residential
-              </h3>
-              <p className="text-left text-gray-100">
-                Lockout service, lock repair and installation, rekeying,
-                security audits, and more.
-              </p>
-            </div>
-          </div>
+          {servicesList.map((service, index) => (
+            <ServiceCard
+              key={index}
+              image_path={service.image_path}
+              image_alt={service.image_alt}
+              icon={service.icon}
+              title={service.title}
+              description={service.description}
+            />
+          ))}
         </div>
       </div>
 
