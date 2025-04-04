@@ -14,6 +14,7 @@ import {
   faWallet,
   faCar,
   faVault,
+  faUserCheck,
 } from "@fortawesome/free-solid-svg-icons";
 
 import Image from "next/image";
@@ -123,7 +124,7 @@ export default function Home() {
               <h1 className="text-5xl font-bold capitalize ">
                 Protecting homes and businesses
               </h1>
-              <p className="py-5">
+              <p className="py-5 max-w-2xl mx-auto">
                 We want to make sure your entire process is{" "}
                 <span className="font-semibold uppercase">stress free</span>,{" "}
                 <span className="font-semibold uppercase">simple</span> , and
@@ -145,13 +146,12 @@ export default function Home() {
       {/* INFORMATION */}
       <div className="px-5 py-32 parent">
         {/* container */}
-        <div className="container flex flex-col gap-10 ">
+        <div className="container flex flex-col gap-10 max-w-2xl mx-auto ">
           {/* left */}
-          <div className="">
+          <div className="w-72 h-96 mx-auto relative">
             <Image
               src="/images/locksmith.jpg"
-              width={500}
-              height={500}
+              fill
               alt="Example"
               className="rounded-lg"
             />
@@ -183,7 +183,7 @@ export default function Home() {
 
       {/* WHY CHOOSE US */}
       <div className="px-5 py-24 parent bg-blue">
-        <div className="container text-white">
+        <div className="container text-white max-w-2xl mx-auto">
           {/* text */}
           <div className="text-center text">
             <SectionHeading>
@@ -197,9 +197,9 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-5 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
             {/* card */}
-            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl">
+            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl max-w-80 mx-auto">
               {/* icon */}
               <div className="flex items-center justify-center">
                 <Icon icon={faClock} className="text-orange-400 w-15" />
@@ -207,7 +207,7 @@ export default function Home() {
 
               <div className="">
                 <h3 className="my-5 text-2xl">Fast response time</h3>
-                <p className="text-left text-gray-300">
+                <p className=" text-gray-300">
                   We understand the urgency of lock-related issues, which is why
                   we offer prompt, 24/7 emergency services.
                 </p>
@@ -215,7 +215,7 @@ export default function Home() {
             </div>
 
             {/* card */}
-            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl">
+            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl max-w-80 mx-auto">
               {/* icon */}
               <div className="flex items-center justify-center">
                 <FontAwesomeIcon
@@ -226,7 +226,7 @@ export default function Home() {
 
               <div className="">
                 <h3 className="my-5 text-2xl">Affordable rates</h3>
-                <p className="text-left text-gray-300">
+                <p className=" text-gray-300">
                   Get high-quality locksmith services without breaking the bank.
                   We provide transparent pricing with no hidden fees.
                 </p>
@@ -234,8 +234,43 @@ export default function Home() {
             </div>
 
             {/* card */}
-            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl">
-              <p className="text-left text-gray-300">
+            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl max-w-80 mx-auto">
+              {/* icon */}
+              <div className="flex items-center justify-center">
+                <Icon icon={faUserCheck} className="text-orange-400 w-15" />
+              </div>
+
+              <div className="">
+                <h3 className="my-5 text-2xl">Certified Locksmiths</h3>
+                <p className=" text-gray-300">
+                  We understand the urgency of lock-related issues, which is why
+                  we offer prompt, 24/7 emergency services.
+                </p>
+              </div>
+            </div>
+
+            {/* card */}
+            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl max-w-80 mx-auto">
+              {/* icon */}
+              <div className="flex items-center justify-center">
+                <FontAwesomeIcon
+                  icon={faStar}
+                  className="text-orange-400 w-15"
+                />
+              </div>
+
+              <div className="">
+                <h3 className="my-5 text-2xl">Customer Satisfaction</h3>
+                <p className=" text-gray-300">
+                  Get high-quality locksmith services without breaking the bank.
+                  We provide transparent pricing with no hidden fees.
+                </p>
+              </div>
+            </div>
+
+            {/* card */}
+            <div className="px-5 py-10 flex justify-center items-center text-center border border-gray-700 card rounded-xl h-48 md:col-span-2 lg:col-span-3 max-w-80 mx-auto md:mx-0 md:max-w-full">
+              <p className="text-left text-gray-300 md:w-10/12 ">
                 Call us now at{" "}
                 <span className="text-orange-400 underline">855-633-2453</span>{" "}
                 for a free quote or to schedule your service.
@@ -256,7 +291,7 @@ export default function Home() {
           }
         />
 
-        <div className="flex flex-col gap-10">
+        <div className="flex justify-center flex-wrap gap-10">
           {/* card */}
           {servicesList.map((service, index) => (
             <ServiceCard
@@ -273,7 +308,7 @@ export default function Home() {
 
       {/* BANNER */}
       <div className="px-5 py-24 my-24 text-center text-white bg-black bsad">
-        <div className="container relative z-10">
+        <div className="container max-w-2xl mx-auto relative z-10">
           <SectionHeading>
             Trusted and affordable locksmith services in the DMV area
           </SectionHeading>
@@ -366,7 +401,7 @@ export default function Home() {
 
       {/* ADVANCED SECURITY SOLUTIONS */}
       <div className="px-5 py-32 parent">
-        <div className="container">
+        <div className="container max-w-2xl mx-auto ">
           {/* text */}
           <SectionHeader
             subtitle={"Trusted Eagle Locksmith"}

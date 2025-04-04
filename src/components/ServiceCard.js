@@ -9,7 +9,7 @@ export default function ServiceCard({
   description,
 }) {
   return (
-    <div className="rounded-lg shadow bg-orange">
+    <div className="rounded-lg shadow bg-orange w-80">
       {/* image */}
       <div className="relative w-full h-48">
         {/* Image */}
