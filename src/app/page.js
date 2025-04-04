@@ -26,6 +26,7 @@ import AdvancedItem from "@/components/AdvancedItem";
 import SectionHeading from "@/components/SectionHeading";
 import BannerItem from "@/components/BannerItem";
 import LabelInput from "@/components/LabelInput";
+import SocialItem from "@/components/SocialItem";
 
 export default function Home() {
   let servicesList = [
@@ -505,26 +506,13 @@ export default function Home() {
 
         <div className="">
           <ul className="flex flex-col w-10/12 gap-5 mx-auto ">
-            <li className="flex flex-row items-center gap-3">
-              <div className="flex items-center justify-center bg-blue-500 rounded-full w-15 h-15">
-                <FontAwesomeIcon icon={faStar} className="w-5 " />
-              </div>
-              <p className="text-lg font-semibold">Facebook</p>
-            </li>
-
-            <li className="flex flex-row items-center gap-3">
-              <div className="flex items-center justify-center bg-green-500 rounded-full w-15 h-15">
-                <FontAwesomeIcon icon={faBuilding} className="w-5 " />
-              </div>
-              <p className="text-lg font-semibold">Twitter</p>
-            </li>
-
-            <li className="flex flex-row items-center gap-3">
-              <div className="flex items-center justify-center bg-red-500 rounded-full w-15 h-15">
-                <FontAwesomeIcon icon={faClock} className="w-5 " />
-              </div>
-              <p className="text-lg font-semibold">Google</p>
-            </li>
+            <SocialItem icon={faStar} social="Facebook" color="bg-blue-500" />
+            <SocialItem
+              icon={faBuilding}
+              social="Twitter"
+              color="bg-green-500"
+            />
+            <SocialItem icon={faClock} social="Google" color="bg-red-500" />
           </ul>
         </div>
       </footer>
