@@ -22,6 +22,7 @@ import Logo from "@/components/Logo";
 import Button from "@/components/Button";
 import SectionHeader from "@/components/SectionHeader";
 import ServiceCard from "@/components/ServiceCard";
+import AdvancedItem from "@/components/AdvancedItem";
 
 export default function Home() {
   let servicesList = [
@@ -65,6 +66,14 @@ export default function Home() {
       description:
         "We provide a wide range of safe locksmith services, including lock repairs, installations, and security upgrades.",
     },
+  ];
+
+  let advancedSecurityList = [
+    "24 hour emergency locksmith services & advanced security solutions.",
+    "24 Hour Locksmith Service for Commercial and Residential properties and Automobiles.",
+    "Locked out? Lost a key? Skilled locksmith technicians available 24 hours a day.",
+    "100% satisfaction guarantee.",
+    "Our dedicated staff of dispatchers & locksmiths are committed to providing the highest quality service possible.",
   ];
 
   return (
@@ -366,68 +375,18 @@ export default function Home() {
       <div className="px-5 py-32 parent">
         <div className="container">
           {/* text */}
-          <div className="text-center">
-            <p className="font-medium tracking-wide text-orange-400 uppercase">
-              Trusted Eagle Locksmith
-            </p>
-            <h2 className="text-4xl font-bold uppercase ">
-              Advanced Security Solutions
-            </h2>
-            <p className="py-5">
-              We offer fast and reliable locksmith services for cars, homes, and
+          <SectionHeader
+            subtitle={"Trusted Eagle Locksmith"}
+            title="Advanced Security Solutions"
+            description={`We offer fast and reliable locksmith services for cars, homes, and
               businesses in Washington, D.C., Maryland, and Northern Virginia.
-              Whether you need a new security system or key removal.
-            </p>
-          </div>
+              Whether you need a new security system or key removal.`}
+          />
 
           <div className="flex flex-col gap-5 mt-10">
-            <div className="flex items-center gap-3 list-card">
-              {/* icon */}
-              <div className="">
-                <FontAwesomeIcon
-                  icon={faCheckDouble}
-                  className="w-5 text-orange"
-                />
-              </div>
-
-              {/* paragraph */}
-              <p className="text-left text-gray-500">
-                We specialize in removing broken keys from locks without
-                damaging the lock itself.
-              </p>
-            </div>
-
-            <div className="flex items-center gap-3 list-card">
-              {/* icon */}
-              <div className="">
-                <FontAwesomeIcon
-                  icon={faCheckDouble}
-                  className="w-5 text-orange"
-                />
-              </div>
-
-              {/* paragraph */}
-              <p className="text-left text-gray-500">
-                24 Hour Locksmith Service for Commercial and Residential
-                properties and Automobiles.
-              </p>
-            </div>
-
-            <div className="flex items-center gap-3 list-card">
-              {/* icon */}
-              <div className="">
-                <FontAwesomeIcon
-                  icon={faCheckDouble}
-                  className="w-5 text-orange"
-                />
-              </div>
-
-              {/* paragraph */}
-              <p className="text-left text-gray-500">
-                Locked out? Lost a key? Skilled locksmith technicians available
-                24 hours a day.
-              </p>
-            </div>
+            {advancedSecurityList.map((item, index) => (
+              <AdvancedItem key={index} paragraph={item} />
+            ))}
           </div>
         </div>
       </div>

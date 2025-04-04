@@ -30,7 +30,7 @@ export default function ServiceCard({
           <Icon icon={icon} className="text-orange-400 w-7" />
         </div>
         <h3 className="mt-10 mb-5 text-2xl font-semibold uppercase">{title}</h3>
-        <p className="text-left text-gray-100">{description}</p>
+        <p className="text-left">{description}</p>
       </div>
     </div>
   );
