@@ -15,6 +15,7 @@ import {
 
 import Image from "next/image";
 import Icon from "@/components/Icon";
+import Logo from "@/components/Logo";
 
 export default function Home() {
   return (
@@ -39,14 +40,7 @@ export default function Home() {
           <nav className="z-10 navigator bg-blue ">
             <div className="flex items-center justify-between px-5 py-10">
               {/* LOGO */}
-              <div className="p-2 bg-white rounded-full">
-                <Image
-                  src="/images/logo.png"
-                  width={70}
-                  height={70}
-                  alt="Example"
-                />
-              </div>
+              <Logo size={70} />
 
               {/* CTA */}
               <div className="cta">
