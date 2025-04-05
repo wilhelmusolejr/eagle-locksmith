@@ -2,7 +2,7 @@ import Icon from "./Icon";
 
 export default function SocialItem({ icon, social, color }) {
   return (
-    <li className="flex flex-row items-center gap-3">
+    <li className="flex flex-row items-center gap-3 w-60 ">
       <div
         className={`flex items-center justify-center ${color} rounded-full w-15 h-15`}
       >

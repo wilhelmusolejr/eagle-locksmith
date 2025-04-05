@@ -71,6 +71,14 @@ export default function Home() {
       description:
         "We provide a wide range of safe locksmith services, including lock repairs, installations, and security upgrades.",
     },
+    {
+      image_path: "/images/services/commercial.jpg",
+      image_alt: "Commercial image",
+      icon: faBuilding,
+      title: "Commercial",
+      description:
+        "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
+    },
   ];
 
   let advancedSecurityList = [
@@ -85,51 +93,100 @@ export default function Home() {
     <>
       <header>
         {/* mini header */}
-        <div className="p-5 mini-header">
-          <div className="text-center ">
-            <div className="flex items-center justify-center gap-2 pb-2">
-              <Icon icon={faPhone} className="w-5 text-orange-400" />
-              <p className="font-medium">+1 (844) 411-5625</p>
+        <div className="p-5 xl:px-10 mini-header">
+          <div className="flex flex-col lg:flex-row justify-between items-center ">
+            {/* left */}
+            <div className="flex flex-wrap gap-5 uppercase text-blue">
+              <div className="flex items-center justify-center lg:justify-start gap-2 ">
+                <Icon icon={faPhone} className="w-7 text-orange-400" />
+                <p className="font-medium">+1 (844) 411-5625</p>
+              </div>
+
+              <div className="w-0.5 h-6 bg-gray-400 hidden md:block " />
+
+              <div className=" items-center hidden md:flex justify-center lg:justify-start gap-2 ">
+                <div className="flex items-center justify-center ">
+                  <Icon icon={faClock} className="w-7 text-orange-400" />
+                </div>
+                <p className="font-medium">24 / 7 Emergency lockout services</p>
+              </div>
             </div>
 
-            <p className="font-semibold uppercase text-blue">
-              We Provide fast, reliable and affordable locksmith services
-            </p>
+            {/* right */}
+            <div className="flex items-center justify-center text-center">
+              <p className="font-semibold uppercase text-blue">
+                We Provide fast, reliable and affordable locksmith services.
+              </p>
+            </div>
           </div>
         </div>
 
         <div className="flex flex-col min-h-screen text-white content-header">
           {/* navigator */}
-          <nav className="z-10 navigator bg-blue ">
-            <div className="flex items-center justify-between px-5 py-10">
-              {/* LOGO */}
-              <Logo size={70} />
+          <nav className="z-10 navigator bg-blue shadow-lg">
+            <div className="flex items-center justify-between px-5 xl:px-10 py-7 ">
+              <div className="flex gap-10">
+                {/* LOGO */}
+                <Logo size={70} className="w-fit" />
 
-              {/* CTA */}
-              <div className="cta">
-                <Button>Get A Quote</Button>
+                <ul className="capitalize font-light items-center gap-5 hidden lg:flex text-xl">
+                  <li className="font-bold">
+                    <a href="#">Home</a>
+                  </li>
+                  <li className="">
+                    <a href="#">About us</a>
+                  </li>
+                  <li className="">
+                    <a href="#">Services</a>
+                  </li>
+                  <li className="">
+                    <a href="#">Locations</a>
+                  </li>
+                  <li className="">
+                    <a href="#">Blog</a>
+                  </li>
+                  <li className="">
+                    <a href="#">Contact us</a>
+                  </li>
+                </ul>
               </div>
 
-              {/* BAR */}
-              <Icon icon={faBars} className="w-7 " />
+              <div className="flex flex-row gap-5">
+                {/* CTA */}
+                <div className="cta">
+                  <button className="p-3 md:text-2xl  font-bold uppercase bg-red-700 rounded-md btn btn-primary ">
+                    Get A Quote
+                  </button>
+                </div>
+
+                {/* BAR */}
+                <Icon icon={faBars} className="w-7 lg:hidden" />
+              </div>
             </div>
           </nav>
 
           {/* Make the header take up the remaining space */}
           <div className="z-10 flex items-center justify-center flex-grow header">
             <div className="text-center text">
-              <p className="font-medium tracking-wide text-orange-400 uppercase">
+              <p className="font-bold tracking-wide text-orange-400 uppercase">
                 Trusted Eagle Locksmith
               </p>
-              <h1 className="text-5xl font-bold capitalize ">
+              <h1 className="xl:text-7xl text-5xl font-bold capitalize xl:w-10/12 mx-auto md:leading-normal">
                 Protecting homes and businesses
               </h1>
-              <p className="py-5 max-w-2xl mx-auto">
+              <p className="pt-0 pb-10 max-w-2xl xl:text-xl mx-auto text-gray-300">
                 We want to make sure your entire process is{" "}
-                <span className="font-semibold uppercase">stress free</span>,{" "}
-                <span className="font-semibold uppercase">simple</span> , and
-                more importantly,{" "}
-                <span className="font-semibold uppercase">affordable</span>
+                <span className="font-semibold text-white uppercase">
+                  stress free
+                </span>
+                ,{" "}
+                <span className="font-semibold text-white uppercase">
+                  simple
+                </span>{" "}
+                , and more importantly,{" "}
+                <span className="font-semibold text-white uppercase">
+                  affordable
+                </span>
               </p>
 
               {/* CTA */}
@@ -144,26 +201,26 @@ export default function Home() {
       </header>
 
       {/* INFORMATION */}
-      <div className="px-5 py-32 parent">
+      <div className="px-5 py-32 parent ">
         {/* container */}
-        <div className="container flex flex-col gap-10 max-w-2xl mx-auto ">
+        <div className="container flex flex-col lg:flex-row gap-10 items-center max-w-xl mx-auto lg:max-w-4xl">
           {/* left */}
-          <div className="w-72 h-96 mx-auto relative">
+          <div className="lg:w-1/3 w-full h-96 lg:h-[500px] mx-auto relative flex-shrink-0 flex items-center justify-center">
             <Image
               src="/images/locksmith.jpg"
               fill
               alt="Example"
-              className="rounded-lg"
+              className="object-contain"
             />
           </div>
           {/* right */}
-          <div className="">
+          <div className=" fontlight">
             <SectionHeading>Eagle locksmith services</SectionHeading>
-            <p className="pt-2 font-medium text-blue-700">
+            <p className="pt-2 font-medium text-blue-800 text-lg">
               Get the best quality security solutions for all your lock and
               key-related issues with us in Maryland, DC And Virginia.
             </p>
-            <p className="py-7">
+            <p className="py-7 text-slate-800 font-light">
               You have come on the right place if you are looking for a leading
               and licensed lockout service provider. We offer the best quality
               security solutions for your residential, commercial, and auto
@@ -183,14 +240,14 @@ export default function Home() {
 
       {/* WHY CHOOSE US */}
       <div className="px-5 py-24 parent bg-blue">
-        <div className="container text-white max-w-2xl mx-auto">
+        <div className="container text-white max-w-xl mx-auto lg:max-w-4xl">
           {/* text */}
           <div className="text-center text">
             <SectionHeading>
               Why choose Eagle Locksmith Services?
             </SectionHeading>
 
-            <p className="pt-5 text-gray-300">
+            <p className="pt-5 text-gray-300 lg:w-10/12 mx-auto">
               Whether you need a quick lock repair, a full security upgrade, or
               new lock installations, Eagle Locksmith Services has you covered.
               Protect your home today with our expert locksmith solutions.
@@ -269,7 +326,7 @@ export default function Home() {
             </div>
 
             {/* card */}
-            <div className="px-5 py-10 flex justify-center items-center text-center border border-gray-700 card rounded-xl h-48 md:col-span-2 lg:col-span-3 max-w-80 mx-auto md:mx-0 md:max-w-full">
+            <div className="px-5 py-10 flex justify-center items-center text-center border border-gray-700 card rounded-xl min-h-48 md:col-span-2 lg:col-span-2 max-w-80 mx-auto md:mx-0 md:max-w-full">
               <p className="text-left text-gray-300 md:w-10/12 ">
                 Call us now at{" "}
                 <span className="text-orange-400 underline">855-633-2453</span>{" "}
@@ -282,33 +339,35 @@ export default function Home() {
 
       {/* LIST SERVICES */}
       <div className="px-5 py-32 parent">
-        {/* text */}
-        <SectionHeader
-          subtitle={"Trusted Eagle Locksmith"}
-          title="Our services"
-          description={
-            "We a provide advanced security solutions and a broad spectrum of innovative security product and services for commercial and residential customers."
-          }
-        />
+        <div className="container max-w-xl mx-auto lg:max-w-7xl ">
+          {/* text */}
+          <SectionHeader
+            subtitle={"Trusted Eagle Locksmith"}
+            title="Our services"
+            description={
+              "We a provide advanced security solutions and a broad spectrum of innovative security product and services for commercial and residential customers."
+            }
+          />
 
-        <div className="flex justify-center flex-wrap gap-10">
-          {/* card */}
-          {servicesList.map((service, index) => (
-            <ServiceCard
-              key={index}
-              image_path={service.image_path}
-              image_alt={service.image_alt}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-            />
-          ))}
+          <div className="flex justify-center flex-wrap gap-10 ">
+            {/* card */}
+            {servicesList.map((service, index) => (
+              <ServiceCard
+                key={index}
+                image_path={service.image_path}
+                image_alt={service.image_alt}
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
       {/* BANNER */}
       <div className="px-5 py-24 my-24 text-center text-white bg-black bsad">
-        <div className="container max-w-2xl mx-auto relative z-10">
+        <div className="container max-w-xl mx-auto relative z-10 ">
           <SectionHeading>
             Trusted and affordable locksmith services in the DMV area
           </SectionHeading>
@@ -339,7 +398,7 @@ export default function Home() {
           <div className="h-48 bg-pink-400"></div>
         </div>
 
-        <div className="container py-24">
+        <div className="container max-w-xl mx-auto py-24 ">
           {/* LOGO */}
           <div className="p-2 mx-auto mb-10 bg-white rounded-full w-fit">
             <Image
@@ -351,7 +410,7 @@ export default function Home() {
           </div>
 
           {/* review card */}
-          <div className="w-4/5 p-5 mx-auto bg-white rounded-lg shadow h-80 review-card">
+          <div className="max-w-80 w-4/5 p-5 mx-auto bg-white rounded-lg shadow h-80 review-card">
             <div className="container flex flex-col justify-between h-full">
               <div className="reviewer-description">
                 <p>
@@ -401,7 +460,7 @@ export default function Home() {
 
       {/* ADVANCED SECURITY SOLUTIONS */}
       <div className="px-5 py-32 parent">
-        <div className="container max-w-2xl mx-auto ">
+        <div className="container max-w-xl mx-auto lg:max-w-4xl ">
           {/* text */}
           <SectionHeader
             subtitle={"Trusted Eagle Locksmith"}
@@ -421,11 +480,14 @@ export default function Home() {
 
       {/* CONTACT FORM */}
       <div className="px-5 py-24 parent bg-blue">
-        <div className="container text-white">
+        <div className="container text-white max-w-xl mx-auto lg:max-w-4xl">
           {/* text */}
           <div className="text-center text">
             <SectionHeading>Get in touch with us</SectionHeading>
+          </div>
 
+          <div className="flex flex-col lg:flex-row-reverse gap-10 items-center">
+            {/* text */}
             <div className="pt-10 text-left">
               <h3 className="text-2xl font-semibold text-orange-400 capitalized color-primary">
                 We&apos;re here to help you!
@@ -436,11 +498,30 @@ export default function Home() {
                 covered. Protect your home today with our expert locksmith
                 solutions.
               </p>
-            </div>
-          </div>
 
-          <div className="">
-            <form className="flex flex-col gap-5 mt-10">
+              <div className="mt-10 basis-full sm:basis-[calc(50%-20px)]">
+                <ul className="flex flex-col gap-5 mt-5 text-gray-300">
+                  <li className="flex flex-row items-center gap-3">
+                    <FontAwesomeIcon icon={faPhone} className="w-7" />
+                    <p>+1 (844) 411-5625</p>
+                  </li>
+                  <li className="flex flex-row items-center gap-3">
+                    <FontAwesomeIcon icon={faEnvelope} className="w-7" />
+                    <p>office@eagleservices.com</p>
+                  </li>
+                  <li className="flex flex-row items-center gap-3">
+                    <FontAwesomeIcon icon={faLocationPin} className="w-7" />
+                    <p>
+                      10606 Baltimore Ave Unit B, Beltsville, MD 20705, United
+                      States.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* form */}
+            <form className="flex flex-col gap-5 mt-10 w-full max-w-96 mx-auto">
               {/* FULL NAME */}
               <LabelInput
                 type="text"
@@ -481,74 +562,76 @@ export default function Home() {
 
       {/* MAP */}
       <div className="px-5 py-32 parent">
-        <div className="w-full bg-green-400 rounded-lg h-80"></div>
+        <div className="container mx-auto max-w-xl">
+          <div className="w-full bg-green-400 rounded-lg h-80"></div>
+        </div>
       </div>
 
       <footer className="px-5 py-24 text-white border-t-8 border-red-600 bg-blue">
-        {/* LOGO */}
-        <div className="flex flex-col justify-center gap-5 text-center">
-          {/* logo */}
-          <div className="p-2 mx-auto bg-white rounded-full w-fit">
-            <Image
-              src="/images/logo.png"
-              width={70}
-              height={70}
-              alt="Example"
-            />
-          </div>
-          <h2 className="text-4xl font-bold capitalize">Eagle Locksmith</h2>
-        </div>
-
-        <div className="">
-          <div className="mt-10">
-            <h3 className="text-3xl font-semibold">Service</h3>
-            <ul className="flex flex-col gap-2 mt-5 text-gray-300">
-              <li>Residential Locksmith</li>
-              <li>Commercial Locksmith</li>
-              <li>Automotive Locksmith</li>
-              <li>Emergency Locksmith</li>
-            </ul>
+        <div className="container max-w-xl mx-auto lg:max-w-4xl flex flex-wrap">
+          {/* LOGO */}
+          <div className="flex flex-col justify-center gap-5 text-center">
+            {/* logo */}
+            <div className="p-2 mx-auto bg-white rounded-full w-fit">
+              <Image
+                src="/images/logo.png"
+                width={70}
+                height={70}
+                alt="Example"
+              />
+            </div>
+            <h2 className="text-4xl font-bold capitalize">Eagle Locksmith</h2>
           </div>
 
-          <div className="mt-10">
-            <ul className="flex flex-col gap-5 mt-5 text-gray-300">
-              <li className="flex flex-row items-center gap-3">
-                <div className="">
+          <div className="flex flex-wrap justify-end gap-x-10">
+            {/* Service Section */}
+            <div className="mt-10 basis-full sm:basis-[calc(50%-20px)]">
+              <h3 className="text-3xl font-semibold">Service</h3>
+              <ul className="flex flex-col gap-2 mt-5 text-gray-300">
+                <li>Residential Locksmith</li>
+                <li>Commercial Locksmith</li>
+                <li>Automotive Locksmith</li>
+                <li>Emergency Locksmith</li>
+              </ul>
+            </div>
+
+            {/* Contact Section */}
+            <div className="mt-10 basis-full sm:basis-[calc(50%-20px)]">
+              <ul className="flex flex-col gap-5 mt-5 text-gray-300">
+                <li className="flex flex-row items-center gap-3">
                   <FontAwesomeIcon icon={faPhone} className="w-5" />
-                </div>
-                <p className="">+1 (844) 411-5625</p>
-              </li>
-              <li className="flex flex-row items-center gap-3">
-                <div className="">
+                  <p>+1 (844) 411-5625</p>
+                </li>
+                <li className="flex flex-row items-center gap-3">
                   <FontAwesomeIcon icon={faEnvelope} className="w-5" />
-                </div>
-                <p className="">office@eagleservices.com</p>
-              </li>
-              <li className="flex flex-row items-center gap-3">
-                <div className="">
+                  <p>office@eagleservices.com</p>
+                </li>
+                <li className="flex flex-row items-center gap-3">
                   <FontAwesomeIcon icon={faLocationPin} className="w-5" />
-                </div>
-                <p className="">
-                  10606 Baltimore Ave Unit B, Beltsville, MD 20705, United
-                  States.
-                </p>
-              </li>
-            </ul>
+                  <p>
+                    10606 Baltimore Ave Unit B, Beltsville, MD 20705, United
+                    States.
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className="w-10/12 mx-auto my-10 border-b-2 border-gray-300"></div>
-
         <div className="">
-          <ul className="flex flex-col w-10/12 gap-5 mx-auto ">
-            <SocialItem icon={faStar} social="Facebook" color="bg-blue-500" />
-            <SocialItem
-              icon={faBuilding}
-              social="Twitter"
-              color="bg-green-500"
-            />
-            <SocialItem icon={faClock} social="Google" color="bg-red-500" />
-          </ul>
+          <div className="w-10/12 mx-auto my-10 border-b-2 border-gray-400"></div>
+
+          <div className="">
+            <ul className="flex  justify-center items-center flex-col w-10/12 gap-5 mx-auto  ">
+              <SocialItem icon={faStar} social="Facebook" color="bg-blue-500" />
+              <SocialItem
+                icon={faBuilding}
+                social="Twitter"
+                color="bg-green-500"
+              />
+              <SocialItem icon={faClock} social="Google" color="bg-red-500" />
+            </ul>
+          </div>
         </div>
       </footer>
 

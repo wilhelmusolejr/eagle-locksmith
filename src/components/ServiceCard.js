@@ -9,7 +9,7 @@ export default function ServiceCard({
   description,
 }) {
   return (
-    <div className="rounded-lg shadow bg-orange w-80">
+    <a href="#" className="rounded-lg shadow bg-orange w-80  ">
       {/* image */}
       <div className="relative w-full h-48">
         {/* Image */}
@@ -32,6 +32,6 @@ export default function ServiceCard({
         <h3 className="mt-10 mb-5 text-2xl font-semibold uppercase">{title}</h3>
         <p className="text-left">{description}</p>
       </div>
-    </div>
+    </a>
   );
 }
