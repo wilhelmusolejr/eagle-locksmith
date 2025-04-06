@@ -248,7 +248,7 @@ export default function Home() {
       </div>
 
       {/* WHY CHOOSE US */}
-      <div className="px-5 py-24 parent bg-blue">
+      <div className="px-5 py-32 parent bg-blue">
         <div className="container text-white max-w-xl mx-auto lg:max-w-7xl">
           {/* text */}
           <div className="text-center text">
@@ -263,7 +263,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 font-light">
             {/* card */}
             <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl lg:min-h-96 flex items-center justify-center flex-col mx-auto">
               {/* icon */}
@@ -354,7 +354,7 @@ export default function Home() {
             subtitle={"Trusted Eagle Locksmith"}
             title="Our services"
             description={
-              "We a provide advanced security solutions and a broad spectrum of innovative security product and services for commercial and residential customers."
+              "We provide advanced security solutions and a broad spectrum of innovative security product and services for commercial and residential customers."
             }
           />
 

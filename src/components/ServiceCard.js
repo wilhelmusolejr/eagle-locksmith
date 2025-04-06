@@ -24,7 +24,7 @@ export default function ServiceCard({
         <div className="absolute inset-0 bg-black rounded-t-lg opacity-40 mix-blend-multiply"></div>
       </div>
       {/* text */}
-      <div className="relative p-5 text-white ">
+      <div className="relative p-5 text-white font-light ">
         {/* icon */}
         <div className="flex absolute top-[-50px] items-center justify-center w-20 h-20 p-5 bg-white rounded-lg ">
           <Icon icon={icon} className="text-orange-400 w-7" />
