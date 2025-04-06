@@ -17,6 +17,15 @@ import {
   faUserCheck,
 } from "@fortawesome/free-solid-svg-icons";
 
+import {
+  faFacebook,
+  faLinkedin,
+  faLinkedinIn,
+  faTumblr,
+  faTwitter,
+  faYelp,
+} from "@fortawesome/free-brands-svg-icons";
+
 import Image from "next/image";
 import Icon from "@/components/Icon";
 import Logo from "@/components/Logo";
@@ -240,14 +249,14 @@ export default function Home() {
 
       {/* WHY CHOOSE US */}
       <div className="px-5 py-24 parent bg-blue">
-        <div className="container text-white max-w-xl mx-auto lg:max-w-4xl">
+        <div className="container text-white max-w-xl mx-auto lg:max-w-7xl">
           {/* text */}
           <div className="text-center text">
             <SectionHeading>
               Why choose Eagle Locksmith Services?
             </SectionHeading>
 
-            <p className="pt-5 text-gray-300 lg:w-10/12 mx-auto">
+            <p className="pt-5 text-gray-300 w-10/12 mx-auto lg:w-7/12">
               Whether you need a quick lock repair, a full security upgrade, or
               new lock installations, Eagle Locksmith Services has you covered.
               Protect your home today with our expert locksmith solutions.
@@ -256,7 +265,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
             {/* card */}
-            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl max-w-80 mx-auto">
+            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl lg:min-h-96 flex items-center justify-center flex-col mx-auto">
               {/* icon */}
               <div className="flex items-center justify-center">
                 <Icon icon={faClock} className="text-orange-400 w-15" />
@@ -272,7 +281,7 @@ export default function Home() {
             </div>
 
             {/* card */}
-            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl max-w-80 mx-auto">
+            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl lg:min-h-96 flex items-center justify-center flex-col mx-auto">
               {/* icon */}
               <div className="flex items-center justify-center">
                 <FontAwesomeIcon
@@ -291,7 +300,7 @@ export default function Home() {
             </div>
 
             {/* card */}
-            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl max-w-80 mx-auto">
+            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl lg:min-h-96 flex items-center justify-center flex-col mx-auto">
               {/* icon */}
               <div className="flex items-center justify-center">
                 <Icon icon={faUserCheck} className="text-orange-400 w-15" />
@@ -307,7 +316,7 @@ export default function Home() {
             </div>
 
             {/* card */}
-            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl max-w-80 mx-auto">
+            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl lg:min-h-96 flex items-center justify-center flex-col mx-auto">
               {/* icon */}
               <div className="flex items-center justify-center">
                 <FontAwesomeIcon
@@ -349,7 +358,7 @@ export default function Home() {
             }
           />
 
-          <div className="flex justify-center flex-wrap gap-10 ">
+          <div className="flex justify-center flex-wrap gap-7 ">
             {/* card */}
             {servicesList.map((service, index) => (
               <ServiceCard
@@ -367,7 +376,7 @@ export default function Home() {
 
       {/* BANNER */}
       <div className="px-5 py-24 my-24 text-center text-white bg-black bsad">
-        <div className="container max-w-xl mx-auto relative z-10 ">
+        <div className="container max-w-xl mx-auto relative z-10 lg:max-w-4xl">
           <SectionHeading>
             Trusted and affordable locksmith services in the DMV area
           </SectionHeading>
@@ -379,7 +388,7 @@ export default function Home() {
             <BannerItem icon={faCheck} title="Cost-effective" />
           </div>
 
-          <p className="font-light">
+          <p className="font-light md:w-8/12 mx-auto ">
             Eagle Locksmith Services is here to help! Our team of certified
             locksmiths, backed by years of experience, offers high-quality
             residential locksmith solutions to keep your home secure.
@@ -568,7 +577,7 @@ export default function Home() {
       </div>
 
       <footer className="px-5 py-24 text-white border-t-8 border-red-600 bg-blue">
-        <div className="container max-w-xl mx-auto lg:max-w-4xl flex flex-wrap">
+        <div className="container max-w-xl mx-auto lg:max-w-7xl flex flex-wrap lg:flex-nowrap justify-center lg:justify-between mb-24 gap-10">
           {/* LOGO */}
           <div className="flex flex-col justify-center gap-5 text-center">
             {/* logo */}
@@ -583,9 +592,9 @@ export default function Home() {
             <h2 className="text-4xl font-bold capitalize">Eagle Locksmith</h2>
           </div>
 
-          <div className="flex flex-wrap justify-end gap-x-10">
+          <div className="flex flex-wrap justify-end items-start gap-10">
             {/* Service Section */}
-            <div className="mt-10 basis-full sm:basis-[calc(50%-20px)]">
+            <div className=" lg:basis-60 basis-full sm:basis-[calc(50%-20px)]">
               <h3 className="text-3xl font-semibold">Service</h3>
               <ul className="flex flex-col gap-2 mt-5 text-gray-300">
                 <li>Residential Locksmith</li>
@@ -596,18 +605,24 @@ export default function Home() {
             </div>
 
             {/* Contact Section */}
-            <div className="mt-10 basis-full sm:basis-[calc(50%-20px)]">
-              <ul className="flex flex-col gap-5 mt-5 text-gray-300">
+            <div className=" lg:basis-0 basis-full sm:basis-[calc(50%-20px)]">
+              <ul className="flex flex-col gap-5 text-gray-300">
                 <li className="flex flex-row items-center gap-3">
-                  <FontAwesomeIcon icon={faPhone} className="w-5" />
+                  <div className="w-10">
+                    <FontAwesomeIcon icon={faPhone} className="w-7" />
+                  </div>
                   <p>+1 (844) 411-5625</p>
                 </li>
                 <li className="flex flex-row items-center gap-3">
-                  <FontAwesomeIcon icon={faEnvelope} className="w-5" />
+                  <div className="w-10">
+                    <FontAwesomeIcon icon={faEnvelope} className="w-7" />
+                  </div>
                   <p>office@eagleservices.com</p>
                 </li>
                 <li className="flex flex-row items-center gap-3">
-                  <FontAwesomeIcon icon={faLocationPin} className="w-5" />
+                  <div className="w-10">
+                    <FontAwesomeIcon icon={faLocationPin} className="w-7" />
+                  </div>
                   <p>
                     10606 Baltimore Ave Unit B, Beltsville, MD 20705, United
                     States.
@@ -619,55 +634,35 @@ export default function Home() {
         </div>
 
         <div className="">
-          <div className="w-10/12 mx-auto my-10 border-b-2 border-gray-400"></div>
+          <div className="w-6/12  mx-auto my-10 border-b-2 border-gray-500"></div>
 
           <div className="">
-            <ul className="flex  justify-center items-center flex-col w-10/12 gap-5 mx-auto  ">
-              <SocialItem icon={faStar} social="Facebook" color="bg-blue-500" />
+            <ul className="flex justify-center items-center flex-col lg:flex-row w-10/12 gap-5 mx-auto  ">
               <SocialItem
-                icon={faBuilding}
-                social="Twitter"
-                color="bg-green-500"
+                icon={faFacebook}
+                social="Facebook"
+                color="bg-blue-600"
               />
-              <SocialItem icon={faClock} social="Google" color="bg-red-500" />
+              <SocialItem
+                icon={faTwitter}
+                social="Twitter"
+                color="bg-sky-400"
+              />
+              <SocialItem icon={faYelp} social="Yelp" color="bg-red-500" />
+              <SocialItem
+                icon={faLinkedinIn}
+                social="Commercial"
+                color="bg-blue-500"
+              />
+              <SocialItem
+                icon={faTumblr}
+                social="Residential"
+                color="bg-gray-500"
+              />
             </ul>
           </div>
         </div>
       </footer>
-
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </>
   );
 }
