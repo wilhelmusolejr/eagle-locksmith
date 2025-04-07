@@ -6,7 +6,22 @@ import {
   faExclamationTriangle,
   faCar,
   faVault,
+  faPhone,
+  faCheck,
+  faBackward,
+  faLeftLong,
 } from "@fortawesome/free-solid-svg-icons";
+import MiniHeader from "@/components/MiniHeader";
+import Navigator from "@/components/Navigator";
+import SectionHeading from "@/components/SectionHeading";
+import BannerSection from "@/components/sections/BannerSection";
+import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
+import ReviewsSection from "@/components/sections/ReviewsSection";
+import ContactFormSection from "@/components/sections/ContactFormSection";
+import MapSection from "@/components/sections/MapSection";
+import FooterSection from "@/components/sections/FooterSection";
+import Icon from "@/components/Icon";
+import Link from "next/link";
 
 export default async function ServicePage({ params }) {
   const { name } = await params; // params should be accessed directly here
@@ -73,9 +88,136 @@ export default async function ServicePage({ params }) {
   }
 
   return (
-    <div className="p-10">
-      <h1>{service.title}</h1>
-      <p className="mt-4 text-lg">{service.description}</p>
-    </div>
+    <>
+      {/* MINI HEADER */}
+      <MiniHeader />
+
+      {/* NAVIGATOR */}
+      <Navigator />
+
+      {/* HEADER */}
+      <header>
+        <div className="flex flex-col h-[50vh] text-white content-header">
+          {/* Make the header take up the remaining space */}
+          <div className="z-10 flex items-center justify-center flex-grow header">
+            <div className="text-center text">
+              <p className="font-bold tracking-wide text-orange-400 uppercase">
+                Trusted Eagle Locksmith
+              </p>
+              <h1 className="xl:text-7xl text-5xl font-bold capitalize xl:w-10/12 mx-auto md:leading-normal">
+                {service.title}
+              </h1>
+              <p className="pt-5 py-10 max-w-2xl xl:text-xl mx-auto text-gray-300">
+                We want to make sure your entire process is{" "}
+                <span className="font-semibold text-white uppercase">
+                  stress free
+                </span>
+                ,{" "}
+                <span className="font-semibold text-white uppercase">
+                  simple
+                </span>{" "}
+                , and more importantly,{" "}
+                <span className="font-semibold text-white uppercase">
+                  affordable
+                </span>
+              </p>
+
+              {/* CTA */}
+              <div className="cta flex items-center justify-center">
+                <button className="bg-red-700 font-bold rounded-lg uppercase md:text-2xl shadow-lg flex items-center">
+                  <div className="p-3 bg-red-800 rounded-lg ">
+                    <FontAwesomeIcon icon={faPhone} className="w-7" />
+                  </div>
+                  <div className="p-3">Call us today!</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* CONTENT */}
+      <div className="px-5 py-32 parent">
+        <div className="container max-w-xl mx-auto lg:max-w-4xl text-center">
+          <div className="text-left mb-15 uppercase">
+            <Link href="/" className="text-blue tracking-wide font-medium">
+              Services
+            </Link>{" "}
+            / {service.title}
+          </div>
+
+          <SectionHeading>
+            Commercial Locksmith Services For Businesses and Offices
+          </SectionHeading>
+
+          <div className="text-left flex gap-5 flex-col mt-15 text-gray-700 text-lg font-light">
+            <p>
+              We are a trusted 24 / 7 commercial locksmith serving in Maryland
+              and Washington DC area. You can call us for your business security
+              or lockout needs. Over 35 years of experience doing home or
+              business locksmith work in the Maryland and Washington DC area.
+              Our commercial locksmith services are available for you at Eagle
+              Locksmith. We are here available 24 hours a day, Seven days a
+              week, 365 days a year. All of our technicians are fully, licensed
+              and bonded.
+            </p>
+            <p>
+              Eagle Locksmith keeping your building safe and secure. You need a
+              secure building to run the business properly. So with that
+              concept, we are there to help you with the reliable services. You
+              can count on our high quality, efficient locksmith and security
+              system service to keep your area secure, whether you need; new
+              keys or a complete system installation. Our great prices for your
+              secure system. You can have support from us as our locksmith
+              services are too good it’s all-time available to clear your all
+              the projects of the locks.
+            </p>
+            <p>
+              Eagle Locksmith keeping your building safe and secure. You need a
+              secure building to run the business properly. So with that
+              concept, we are there to help you with the reliable services. You
+              can count on our high quality, efficient locksmith and security
+              system service to keep your area secure, whether you need; new
+              keys or a complete system installation. Our great prices for your
+              secure system. You can have support from us as our locksmith
+              services are too good it’s all-time available to clear your all
+              the projects of the locks.
+            </p>
+
+            {/* CTA */}
+            <div className="cta flex items-center justify-center text-white mt-15">
+              <button className="bg-red-700 font-bold rounded-lg uppercase md:text-2xl shadow-lg flex items-center">
+                <div className="p-3 bg-red-800 rounded-lg ">
+                  <FontAwesomeIcon icon={faPhone} className="w-7" />
+                </div>
+                <div className="p-3">Call us today!</div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* BANNER */}
+      <BannerSection />
+
+      {/* WHY CHOOSE US */}
+      <WhyChooseUsSection />
+
+      <div className="my-32"></div>
+
+      {/* REVIEW */}
+      <ReviewsSection />
+
+      <div className="my-32"></div>
+
+      {/* CONTACT FORM */}
+      <ContactFormSection />
+
+      {/* MAP */}
+      <MapSection />
+
+      {/* FOOTER */}
+      <FooterSection />
+    </>
   );
 }
