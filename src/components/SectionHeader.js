@@ -7,7 +7,7 @@ export default function SectionHeader({ subtitle, title, description }) {
         {subtitle}
       </p>
       <SectionHeading>{title}</SectionHeading>
-      <p className="py-5  w-10/12 mx-auto lg:w-7/12">{description}</p>
+      <p className="py-5 w-10/12 mx-auto lg:w-7/12">{description}</p>
     </div>
   );
 }

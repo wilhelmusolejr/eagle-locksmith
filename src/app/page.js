@@ -29,7 +29,6 @@ import {
 import Image from "next/image";
 import Icon from "@/components/Icon";
 import Logo from "@/components/Logo";
-import Button from "@/components/Button";
 import SectionHeader from "@/components/SectionHeader";
 import ServiceCard from "@/components/ServiceCard";
 import AdvancedItem from "@/components/AdvancedItem";
@@ -37,6 +36,7 @@ import SectionHeading from "@/components/SectionHeading";
 import BannerItem from "@/components/BannerItem";
 import LabelInput from "@/components/LabelInput";
 import SocialItem from "@/components/SocialItem";
+import WhyCard from "@/components/WhyCard";
 
 export default function Home() {
   let servicesList = [
@@ -100,80 +100,80 @@ export default function Home() {
 
   return (
     <>
-      <header>
-        {/* mini header */}
-        <div className="p-5 xl:px-10 mini-header">
-          <div className="flex flex-col lg:flex-row justify-between items-center ">
-            {/* left */}
-            <div className="flex flex-wrap gap-5 uppercase text-blue">
-              <div className="flex items-center justify-center lg:justify-start gap-2 ">
-                <Icon icon={faPhone} className="w-7 text-orange-400" />
-                <p className="font-medium">+1 (844) 411-5625</p>
-              </div>
-
-              <div className="w-0.5 h-6 bg-gray-400 hidden md:block " />
-
-              <div className=" items-center hidden md:flex justify-center lg:justify-start gap-2 ">
-                <div className="flex items-center justify-center ">
-                  <Icon icon={faClock} className="w-7 text-orange-400" />
-                </div>
-                <p className="font-medium">24 / 7 Emergency lockout services</p>
-              </div>
+      {/* mini header */}
+      <div className="p-5 xl:px-10 mini-header">
+        <div className="flex flex-col lg:flex-row justify-between items-center ">
+          {/* left */}
+          <div className="flex flex-wrap gap-5 uppercase text-blue">
+            <div className="flex items-center justify-center lg:justify-start gap-2 ">
+              <Icon icon={faPhone} className="w-7 text-orange-400" />
+              <p className="font-medium">+1 (844) 411-5625</p>
             </div>
 
-            {/* right */}
-            <div className="flex items-center justify-center text-center">
-              <p className="font-semibold uppercase text-blue">
-                We Provide fast, reliable and affordable locksmith services.
-              </p>
+            <div className="w-0.5 h-6 bg-gray-400 hidden md:block " />
+
+            <div className=" items-center hidden md:flex justify-center lg:justify-start gap-2 ">
+              <div className="flex items-center justify-center ">
+                <Icon icon={faClock} className="w-7 text-orange-400" />
+              </div>
+              <p className="font-medium">24 / 7 Emergency lockout services</p>
             </div>
           </div>
+
+          {/* right */}
+          <div className="flex items-center justify-center text-center">
+            <p className="font-semibold uppercase text-blue">
+              We Provide fast, reliable and affordable locksmith services.
+            </p>
+          </div>
         </div>
+      </div>
 
-        <div className="flex flex-col min-h-screen text-white content-header">
-          {/* navigator */}
-          <nav className="z-10 navigator bg-blue shadow-lg">
-            <div className="flex items-center justify-between px-5 xl:px-10 py-7 ">
-              <div className="flex gap-10">
-                {/* LOGO */}
-                <Logo size={70} className="w-fit" />
+      {/* navigator */}
+      <nav className="z-20 navigator text-white shadow-lg sticky top-0">
+        <div className="flex items-center justify-between px-5 xl:px-10 py-7 ">
+          <div className="flex gap-10">
+            {/* LOGO */}
+            <Logo size={70} className="w-fit" />
 
-                <ul className="capitalize font-light items-center gap-5 hidden lg:flex text-xl">
-                  <li className="font-bold">
-                    <a href="#">Home</a>
-                  </li>
-                  <li className="">
-                    <a href="#">About us</a>
-                  </li>
-                  <li className="">
-                    <a href="#">Services</a>
-                  </li>
-                  <li className="">
-                    <a href="#">Locations</a>
-                  </li>
-                  <li className="">
-                    <a href="#">Blog</a>
-                  </li>
-                  <li className="">
-                    <a href="#">Contact us</a>
-                  </li>
-                </ul>
-              </div>
+            <ul className="capitalize font-light items-center gap-5 hidden lg:flex text-xl">
+              <li className="font-bold">
+                <a href="#">Home</a>
+              </li>
+              <li className="">
+                <a href="#">About us</a>
+              </li>
+              <li className="">
+                <a href="#">Services</a>
+              </li>
+              <li className="">
+                <a href="#">Locations</a>
+              </li>
+              <li className="">
+                <a href="#">Blog</a>
+              </li>
+              <li className="">
+                <a href="#">Contact us</a>
+              </li>
+            </ul>
+          </div>
 
-              <div className="flex flex-row gap-5">
-                {/* CTA */}
-                <div className="cta">
-                  <button className="p-3 md:text-2xl  font-bold uppercase bg-red-700 rounded-md btn btn-primary ">
-                    Get A Quote
-                  </button>
-                </div>
-
-                {/* BAR */}
-                <Icon icon={faBars} className="w-7 lg:hidden" />
-              </div>
+          <div className="flex flex-row gap-5">
+            {/* CTA */}
+            <div className="cta">
+              <button className="p-3 md:text-2xl shadow-2xl cursor-pointer font-bold uppercase bg-red-700 rounded-md btn btn-primary ">
+                Get A Quote
+              </button>
             </div>
-          </nav>
 
+            {/* BAR */}
+            <Icon icon={faBars} className="w-7 lg:hidden" />
+          </div>
+        </div>
+      </nav>
+
+      <header>
+        <div className="flex flex-col h-[80vh] text-white content-header">
           {/* Make the header take up the remaining space */}
           <div className="z-10 flex items-center justify-center flex-grow header">
             <div className="text-center text">
@@ -199,9 +199,12 @@ export default function Home() {
               </p>
 
               {/* CTA */}
-              <div className="cta">
-                <button className="p-5 font-bold uppercase bg-red-700 rounded-md btn btn-primary ">
-                  Call us today!
+              <div className="cta flex items-center justify-center">
+                <button className="bg-red-700 font-bold rounded-lg uppercase md:text-2xl shadow-lg flex items-center">
+                  <div className="p-3 bg-red-800 rounded-lg ">
+                    <FontAwesomeIcon icon={faPhone} className="w-7" />
+                  </div>
+                  <div className="p-3">Call us today!</div>
                 </button>
               </div>
             </div>
@@ -239,8 +242,11 @@ export default function Home() {
             </p>
 
             <div className="text-white cta">
-              <button className="p-5 font-bold uppercase rounded-md bg-blue btn btn-primary ">
-                Call us today!
+              <button className="bg-blue-800 font-bold rounded-lg uppercase md:text-2xl shadow-lg flex items-center">
+                <div className="p-3 bg-blue rounded-lg ">
+                  <FontAwesomeIcon icon={faPhone} className="w-7" />
+                </div>
+                <div className="p-3">Call us today!</div>
               </button>
             </div>
           </div>
@@ -265,80 +271,40 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 font-light">
             {/* card */}
-            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl lg:min-h-96 flex items-center justify-center flex-col mx-auto">
-              {/* icon */}
-              <div className="flex items-center justify-center">
-                <Icon icon={faClock} className="text-orange-400 w-15" />
-              </div>
-
-              <div className="">
-                <h3 className="my-5 text-2xl">Fast response time</h3>
-                <p className=" text-gray-300">
-                  We understand the urgency of lock-related issues, which is why
-                  we offer prompt, 24/7 emergency services.
-                </p>
-              </div>
-            </div>
+            <WhyCard
+              icon={faClock}
+              title="Fast response time"
+              description="We understand the urgency of lock-related issues, which is why we offer prompt, 24/7 emergency services."
+            />
 
             {/* card */}
-            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl lg:min-h-96 flex items-center justify-center flex-col mx-auto">
-              {/* icon */}
-              <div className="flex items-center justify-center">
-                <FontAwesomeIcon
-                  icon={faWallet}
-                  className="text-orange-400 w-15"
-                />
-              </div>
-
-              <div className="">
-                <h3 className="my-5 text-2xl">Affordable rates</h3>
-                <p className=" text-gray-300">
-                  Get high-quality locksmith services without breaking the bank.
-                  We provide transparent pricing with no hidden fees.
-                </p>
-              </div>
-            </div>
+            <WhyCard
+              icon={faWallet}
+              title="Affordable rates"
+              description="Get high-quality locksmith services without breaking the bank. We provide transparent pricing with no hidden fees."
+            />
 
             {/* card */}
-            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl lg:min-h-96 flex items-center justify-center flex-col mx-auto">
-              {/* icon */}
-              <div className="flex items-center justify-center">
-                <Icon icon={faUserCheck} className="text-orange-400 w-15" />
-              </div>
-
-              <div className="">
-                <h3 className="my-5 text-2xl">Certified Locksmiths</h3>
-                <p className=" text-gray-300">
-                  We understand the urgency of lock-related issues, which is why
-                  we offer prompt, 24/7 emergency services.
-                </p>
-              </div>
-            </div>
+            <WhyCard
+              icon={faUserCheck}
+              title="Certified Locksmiths"
+              description="We understand the urgency of lock-related issues, which is why we offer prompt, 24/7 emergency services."
+            />
 
             {/* card */}
-            <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl lg:min-h-96 flex items-center justify-center flex-col mx-auto">
-              {/* icon */}
-              <div className="flex items-center justify-center">
-                <FontAwesomeIcon
-                  icon={faStar}
-                  className="text-orange-400 w-15"
-                />
-              </div>
-
-              <div className="">
-                <h3 className="my-5 text-2xl">Customer Satisfaction</h3>
-                <p className=" text-gray-300">
-                  Get high-quality locksmith services without breaking the bank.
-                  We provide transparent pricing with no hidden fees.
-                </p>
-              </div>
-            </div>
+            <WhyCard
+              icon={faStar}
+              title="Customer Satisfaction"
+              description={`Get high-quality locksmith services without breaking the bank. We provide transparent pricing with no hidden fees.`}
+            />
 
             {/* card */}
             <div className="px-5 py-10 flex justify-center items-center text-center border border-gray-700 card rounded-xl min-h-48 md:col-span-2 lg:col-span-2 max-w-80 mx-auto md:mx-0 md:max-w-full">
-              <p className="text-left text-gray-300 md:w-10/12 ">
+              <p className="text-left text-2xl text-gray-300 md:w-10/12 ">
                 Call us now at{" "}
-                <span className="text-orange-400 underline">855-633-2453</span>{" "}
+                <span className="text-orange-400 underline font-medium">
+                  855-633-2453
+                </span>{" "}
                 for a free quote or to schedule your service.
               </p>
             </div>
@@ -375,8 +341,8 @@ export default function Home() {
       </div>
 
       {/* BANNER */}
-      <div className="px-5 py-24 my-24 text-center text-white bg-black bsad">
-        <div className="container max-w-xl mx-auto relative z-10 lg:max-w-4xl">
+      <div className="px-5 py-24 my-24 text-center text-white bg-black bsad hidden">
+        <div className="container max-w-xl mx-auto relative z-10 lg:max-w-4xl rounded-lg">
           <SectionHeading>
             Trusted and affordable locksmith services in the DMV area
           </SectionHeading>
@@ -396,6 +362,29 @@ export default function Home() {
         </div>
       </div>
 
+      {/* BANNER */}
+      <div className=" pb-32 parent banner-small">
+        <div className="container mx-auto md:max-w-7xl w-full">
+          <div className="w-full bg-black banner min-h-96 text-white text-center py-10 px-5 flex items-center justify-center flex-col ">
+            <h2 className="text-3xl md:text-4xl font-bold z-10 capitalize md:w-8/12">
+              Trusted and affordable locksmith services in the DMV area
+            </h2>
+            <div className="flex flex-col z-10 items-center justify-center gap-1 my-5">
+              {/* check card */}
+              <BannerItem icon={faCheck} title="Quick" />
+              <BannerItem icon={faCheck} title="Reliable" />
+              <BannerItem icon={faCheck} title="Dependable" />
+              <BannerItem icon={faCheck} title="Cost-effective" />
+            </div>
+            <p className="font-light md:w-8/12 mx-auto z-10 lg:w-7/12">
+              Eagle Locksmith Services is here to help! Our team of certified
+              locksmiths, backed by years of experience, offers high-quality
+              residential locksmith solutions to keep your home secure.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* REVIEW */}
       <div className="bg-orange-400 parent">
         <div className="hidden grid-cols-2 grid-rows-3 ">
@@ -407,7 +396,7 @@ export default function Home() {
           <div className="h-48 bg-pink-400"></div>
         </div>
 
-        <div className="container max-w-xl mx-auto py-24 ">
+        <div className="container mx-auto py-24 ">
           {/* LOGO */}
           <div className="p-2 mx-auto mb-10 bg-white rounded-full w-fit">
             <Image
@@ -418,10 +407,10 @@ export default function Home() {
             />
           </div>
 
-          {/* review card */}
-          <div className="max-w-80 w-4/5 p-5 mx-auto bg-white rounded-lg shadow h-80 review-card">
-            <div className="container flex flex-col justify-between h-full">
-              <div className="reviewer-description">
+          <div className="flex gap-5 flex-row justify-center items-center">
+            {/* review card */}
+            <div className="max-w-80 bg-white rounded-lg shadow review-card container flex flex-col p-5 min-h-72 justify-between h-full">
+              <div className="reviewer-description font-light">
                 <p>
                   My experience with Eagle Locksmith was outstanding from start
                   to finish. I needed to upgrade the locks on my business after
@@ -438,6 +427,50 @@ export default function Home() {
                 </div>
                 <div className="">
                   <h3 className="font-medium">Jared Bryant</h3>
+                  <div className="flex items-center stars">
+                    <FontAwesomeIcon
+                      icon={faStar}
+                      className="w-5 text-orange"
+                    />
+                    <FontAwesomeIcon
+                      icon={faStar}
+                      className="w-5 text-orange"
+                    />
+                    <FontAwesomeIcon
+                      icon={faStar}
+                      className="w-5 text-orange"
+                    />
+                    <FontAwesomeIcon
+                      icon={faStar}
+                      className="w-5 text-orange"
+                    />
+                    <FontAwesomeIcon
+                      icon={faStar}
+                      className="w-5 text-orange"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* review card */}
+            <div className="max-w-80 bg-white rounded-lg shadow review-card container flex flex-col p-5 min-h-72 justify-between h-full">
+              <div className="reviewer-description font-light">
+                <p>
+                  Super fast service, called them to re-key my locks and made an
+                  appointment. Easy and done within 20 minutes. Awesome service
+                  and super nice. Thanks!
+                </p>
+              </div>
+
+              {/* reviewer */}
+              <div className="flex items-center gap-2 reviewer-info">
+                {/* image */}
+                <div className="">
+                  <div className="bg-yellow-500 rounded-full w-15 h-15"></div>
+                </div>
+                <div className="">
+                  <h3 className="font-medium">Hector Perkins</h3>
                   <div className="flex items-center stars">
                     <FontAwesomeIcon
                       icon={faStar}
@@ -571,8 +604,8 @@ export default function Home() {
 
       {/* MAP */}
       <div className="px-5 py-32 parent">
-        <div className="container mx-auto max-w-xl">
-          <div className="w-full bg-green-400 rounded-lg h-80"></div>
+        <div className="container mx-auto max-w-7xl">
+          <div className="w-full bg-black rounded-lg h-96"></div>
         </div>
       </div>
 

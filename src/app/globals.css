@@ -26,6 +26,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+nav.navigator {
+  background: linear-gradient(140deg, #056396 0%, #0e0d46 100%);
+}
+
 .blue {
   color: var(--blue);
 }
@@ -78,4 +82,30 @@ body {
   background-color: black;
   opacity: 0.8;
   z-index: 0;
+}
+
+.banner-small .banner {
+  position: relative;
+
+  background: url("/images/banner.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.banner-small .banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+@media (min-width: 1024px) {
+  .banner-small .banner {
+    border-radius: 1rem;
+    overflow: hidden; /* optional: to make sure child elements like ::after respect the radius */
+  }
 }
