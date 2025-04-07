@@ -173,7 +173,7 @@ export default function Home() {
       </nav>
 
       <header>
-        <div className="flex flex-col h-[80vh] text-white content-header">
+        <div className="flex flex-col h-[70vh] text-white content-header">
           {/* Make the header take up the remaining space */}
           <div className="z-10 flex items-center justify-center flex-grow header">
             <div className="text-center text">
@@ -454,7 +454,7 @@ export default function Home() {
             </div>
 
             {/* review card */}
-            <div className="max-w-80 bg-white rounded-lg shadow review-card container flex flex-col p-5 min-h-72 justify-between h-full">
+            <div className="max-w-80 hidden bg-white rounded-lg shadow review-card container  flex-col p-5 min-h-72 justify-between h-full">
               <div className="reviewer-description font-light">
                 <p>
                   Super fast service, called them to re-key my locks and made an
