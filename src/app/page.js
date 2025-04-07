@@ -38,7 +38,7 @@ import LabelInput from "@/components/LabelInput";
 import SocialItem from "@/components/SocialItem";
 import WhyCard from "@/components/WhyCard";
 
-export default function Home() {
+export default async function Home() {
   let servicesList = [
     {
       image_path: "/images/services/commercial.jpg",
