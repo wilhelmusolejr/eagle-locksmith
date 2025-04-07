@@ -9,7 +9,10 @@ export default function ServiceCard({
   description,
 }) {
   return (
-    <a href="#" className="rounded-lg shadow bg-orange w-80  ">
+    <a
+      href={`/services/${title.toLowerCase()}`}
+      className="rounded-lg shadow bg-orange w-80  "
+    >
       {/* image */}
       <div className="relative w-full h-48">
         {/* Image */}
