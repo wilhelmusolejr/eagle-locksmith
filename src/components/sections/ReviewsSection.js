@@ -2,20 +2,27 @@ import React from "react";
 import Image from "next/image";
 import Icon from "../Icon";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import ReviewImageBg from "./ReviewImageBg";
 
 export default function ReviewsSection() {
   return (
-    <div className="bg-orange-400 parent">
-      <div className="hidden grid-cols-2 grid-rows-3 ">
-        <div className="h-48 bg-red-400"></div>
-        <div className="h-48 bg-blue-400"></div>
-        <div className="h-48 bg-green-400"></div>
-        <div className="h-48 bg-purple-400"></div>
-        <div className="h-48 bg-yellow-400"></div>
-        <div className="h-48 bg-pink-400"></div>
+    <div className="relative parent">
+      {/* Background images behind everything */}
+      <div className="grid grid-cols-5 grid-rows-2 min-h-[500px] absolute inset-0">
+        {/* Image */}
+        <ReviewImageBg url="image" />
+        <ReviewImageBg url="image-1" />
+        <ReviewImageBg url="image-2" />
+        <ReviewImageBg url="image-3" />
+        <ReviewImageBg url="image-4" />
+        <ReviewImageBg url="image-5" />
+        <ReviewImageBg url="image-6" />
+        <ReviewImageBg url="image-7" />
+        <ReviewImageBg url="image-8" />
+        <ReviewImageBg url="image-9" />
       </div>
 
-      <div className="container mx-auto py-24 ">
+      <div className="container mx-auto py-24 z-10 relative ">
         {/* LOGO */}
         <div className="p-2 mx-auto mb-10 bg-white rounded-full w-fit">
           <Image
@@ -26,6 +33,7 @@ export default function ReviewsSection() {
           />
         </div>
 
+        {/* Reviews */}
         <div className="flex gap-5 flex-row justify-center items-center">
           {/* review card */}
           <div className="max-w-80 bg-white rounded-lg shadow review-card container flex flex-col p-5 min-h-72 justify-between h-full">

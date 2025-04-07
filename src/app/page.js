@@ -1,30 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faBars,
   faBuilding,
-  faCheck,
   faCheckDouble,
-  faClock,
-  faEnvelope,
   faHome,
-  faLocationPin,
   faPhone,
-  faStar,
   faExclamationTriangle,
-  faWallet,
   faCar,
   faVault,
-  faUserCheck,
 } from "@fortawesome/free-solid-svg-icons";
-
-import {
-  faFacebook,
-  faLinkedin,
-  faLinkedinIn,
-  faTumblr,
-  faTwitter,
-  faYelp,
-} from "@fortawesome/free-brands-svg-icons";
 
 import Image from "next/image";
 import Icon from "@/components/Icon";
@@ -44,6 +27,8 @@ import ReviewsSection from "@/components/sections/ReviewsSection";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import MapSection from "@/components/sections/MapSection";
 import FooterSection from "@/components/sections/FooterSection";
+
+import Head from "next/head";
 
 export default async function Home() {
   let servicesList = [
@@ -107,6 +92,10 @@ export default async function Home() {
 
   return (
     <>
+      <Head>
+        <title>{`Eagle Locksmith`}</title>
+      </Head>
+
       {/* MINI HEADER */}
       <MiniHeader />
 

@@ -7,9 +7,6 @@ import {
   faCar,
   faVault,
   faPhone,
-  faCheck,
-  faBackward,
-  faLeftLong,
 } from "@fortawesome/free-solid-svg-icons";
 import MiniHeader from "@/components/MiniHeader";
 import Navigator from "@/components/Navigator";
@@ -20,62 +17,81 @@ import ReviewsSection from "@/components/sections/ReviewsSection";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import MapSection from "@/components/sections/MapSection";
 import FooterSection from "@/components/sections/FooterSection";
-import Icon from "@/components/Icon";
 import Link from "next/link";
+import Head from "next/head";
+
+let servicesList = [
+  {
+    image_path: "/images/services/commercial.jpg",
+    image_alt: "Commercial image",
+    icon: faBuilding,
+    title: "Commercial",
+    description:
+      "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
+  },
+  {
+    image_path: "/images/services/residential.jpg",
+    image_alt: "Residential image",
+    icon: faHome,
+    title: "Residential",
+    description:
+      "Lockout service, lock repair and installation, rekeying, security audits, and more.",
+  },
+  {
+    image_path: "/images/services/emergency.jpg",
+    image_alt: "Emergency image",
+    icon: faExclamationTriangle,
+    title: "Emergency",
+    description:
+      "Lockout service, lock repair and installation, rekeying, security audits, and more.",
+  },
+  {
+    image_path: "/images/services/automotive.jpg",
+    image_alt: "Automotive image",
+    icon: faCar,
+    title: "Automotive",
+    description:
+      "We provide a wide range of automotive locksmith services, including lock repairs, installations, and security upgrades.",
+  },
+  {
+    image_path: "/images/services/safe.jpg",
+    image_alt: "Safe image",
+    icon: faVault,
+    title: "Safe",
+    description:
+      "We provide a wide range of safe locksmith services, including lock repairs, installations, and security upgrades.",
+  },
+  {
+    image_path: "/images/services/commercial.jpg",
+    image_alt: "Commercial image",
+    icon: faBuilding,
+    title: "Commercial",
+    description:
+      "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
+  },
+];
+
+// ✅ Set page metadata dynamically
+export async function generateMetadata({ params }) {
+  const service = servicesList.find(
+    (item) => item.title.toLowerCase() === params.name.toLowerCase()
+  );
+
+  if (!service) {
+    return {
+      title: "Service Not Found | Eagle Locksmith",
+      description: "The requested locksmith service does not exist.",
+    };
+  }
+
+  return {
+    title: `${service.title} Services | Eagle Locksmith`,
+    description: service.description,
+  };
+}
 
 export default async function ServicePage({ params }) {
   const { name } = await params; // params should be accessed directly here
-
-  let servicesList = [
-    {
-      image_path: "/images/services/commercial.jpg",
-      image_alt: "Commercial image",
-      icon: faBuilding,
-      title: "Commercial",
-      description:
-        "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
-    },
-    {
-      image_path: "/images/services/residential.jpg",
-      image_alt: "Residential image",
-      icon: faHome,
-      title: "Residential",
-      description:
-        "Lockout service, lock repair and installation, rekeying, security audits, and more.",
-    },
-    {
-      image_path: "/images/services/emergency.jpg",
-      image_alt: "Emergency image",
-      icon: faExclamationTriangle,
-      title: "Emergency",
-      description:
-        "Lockout service, lock repair and installation, rekeying, security audits, and more.",
-    },
-    {
-      image_path: "/images/services/automotive.jpg",
-      image_alt: "Automotive image",
-      icon: faCar,
-      title: "Automotive",
-      description:
-        "We provide a wide range of automotive locksmith services, including lock repairs, installations, and security upgrades.",
-    },
-    {
-      image_path: "/images/services/safe.jpg",
-      image_alt: "Safe image",
-      icon: faVault,
-      title: "Safe",
-      description:
-        "We provide a wide range of safe locksmith services, including lock repairs, installations, and security upgrades.",
-    },
-    {
-      image_path: "/images/services/commercial.jpg",
-      image_alt: "Commercial image",
-      icon: faBuilding,
-      title: "Commercial",
-      description:
-        "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
-    },
-  ];
 
   // Find the service based on the name from params
   const service = servicesList.find(
