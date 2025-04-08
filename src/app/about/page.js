@@ -28,6 +28,7 @@ import FooterSection from "@/components/sections/FooterSection";
 import Icon from "@/components/Icon";
 import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
+import IconLabelCard from "@/components/IconLabelCard";
 
 export default function AboutPage() {
   return (
@@ -118,88 +119,47 @@ export default function AboutPage() {
                 Experience, Reliability, and Innovation
               </h3>
               <div className="grid grid-cols-1 my-5 md:grid-cols-2 gap-6 text-gray-800">
-                <div className="flex items-start gap-4">
-                  <span className="text-red-700 mt-1">
-                    <Icon icon={faKey} className="w-7" />
-                  </span>
-                  <div>
-                    <h4 className="font-semibold">Master Key Systems</h4>
-                    <p className="text-sm">
-                      Custom-designed, professionally installed, and regularly
-                      maintained.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-red-700 mt-1">
-                    <Icon icon={faLock} className="w-7" />
-                  </span>
-                  <div>
-                    <h4 className="font-semibold">High-Security Locks</h4>
-                    <p className="text-sm">
-                      Top-tier locks for both residential and commercial
-                      protection.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-red-700 mt-1">
-                    <Icon icon={faVideo} className="w-7" />
-                  </span>
-                  <div>
-                    <h4 className="font-semibold">CCTV Systems</h4>
-                    <p className="text-sm">
-                      Closed-circuit video surveillance for safety and
-                      monitoring.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-red-700 mt-1">
-                    <Icon icon={faIdCard} className="w-7" />
-                  </span>
-                  <div>
-                    <h4 className="font-semibold">Access Control</h4>
-                    <p className="text-sm">
-                      Card-based or digital access systems for restricted areas.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-red-700 mt-1">
-                    <Icon icon={faPhone} className="w-7" />
-                  </span>
-                  <div>
-                    <h4 className="font-semibold">Telephone Access</h4>
-                    <p className="text-sm">
-                      Secure entry for offices and residential buildings via
-                      intercom systems.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-red-700 mt-1">
-                    <Icon icon={faCar} className="w-7" />
-                  </span>
-                  <div>
-                    <h4 className="font-semibold">Automotive Locks</h4>
-                    <p className="text-sm">
-                      High-security solutions for domestic and foreign vehicles.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-red-700 mt-1">
-                    <Icon icon={faVault} className="w-7" />
-                  </span>
-                  <div>
-                    <h4 className="font-semibold">Safes</h4>
-                    <p className="text-sm">
-                      Sales, delivery, and maintenance of commercial and
-                      residential safes.
-                    </p>
-                  </div>
-                </div>
+                <IconLabelCard
+                  icon={faKey}
+                  title={`Master Key Systems`}
+                  description={`Custom-designed, professionally installed, and regularly maintained.`}
+                />
+                <IconLabelCard
+                  icon={faHome}
+                  title={`High-Security Locks`}
+                  description={`Top-tier locks for both residential and commercial protection.`}
+                />
+
+                <IconLabelCard
+                  icon={faVideo}
+                  title={`CCTV Systems`}
+                  description={`Closed-circuit video surveillance for safety and monitoring.`}
+                />
+
+                <IconLabelCard
+                  icon={faIdCard}
+                  title={`Access Control`}
+                  description={`Card-based or digital access systems for restricted areas.`}
+                />
+
+                <IconLabelCard
+                  icon={faPhone}
+                  title={`Telephone Access`}
+                  description={`Secure entry for offices and residential buildings via intercom systems.`}
+                />
+
+                <IconLabelCard
+                  icon={faCar}
+                  title={`Automotive Locks`}
+                  description={`High-security solutions for domestic and foreign vehicles.`}
+                />
+
+                <IconLabelCard
+                  icon={faVault}
+                  title={`Safes`}
+                  description={`Sales, delivery, and maintenance of commercial and
+                      residential safes.`}
+                />
               </div>
             </div>
 
@@ -214,16 +174,6 @@ export default function AboutPage() {
               and military personnel. Call us today at 855-633-2453 for prompt
               assistance and expert locksmith solutions tailored to your needs.
             </p>
-
-            {/* CTA */}
-            <div className="cta hidden items-center justify-center text-white mt-15">
-              <button className="bg-red-700 font-bold rounded-lg uppercase md:text-2xl shadow-lg flex items-center">
-                <div className="p-3 bg-red-800 rounded-lg ">
-                  <FontAwesomeIcon icon={faPhone} className="w-7" />
-                </div>
-                <div className="p-3">Call us today!</div>
-              </button>
-            </div>
           </div>
         </div>
 
@@ -243,18 +193,16 @@ export default function AboutPage() {
               our goal to ensure every customer feels safe, respected, and
               confident in our services.
             </p>
-          </div>
 
-          <div className="w-full h-96 bg-amber-300 mt-10 relative">
-            <Image
-              src={"/images/about/highview.webp"}
-              fill
-              alt="Example"
-              className="object-fill"
-            />
-          </div>
+            <div className="w-full h-96 bg-amber-300 mt-10 relative">
+              <Image
+                src={"/images/about/highview.webp"}
+                fill
+                alt="Example"
+                className="object-fill"
+              />
+            </div>
 
-          <div className="text-left flex gap-5 flex-col mt-5 text-gray-700 text-lg font-light">
             <p>
               We believe that The Best Way to Protect Our Customers is to
               provide them with Locksmith Services and Security Solutions that
@@ -264,76 +212,40 @@ export default function AboutPage() {
               our client’s satisfaction more than anything else. Come to us and
               experience the best locksmith services in Maryland!
             </p>
-          </div>
 
-          <div className="my-10">
-            <h3 className="text-xl font-medium  text-red-700 mb-10">
-              Experience, Reliability, and Innovation
-            </h3>
-            <div className="grid text-left grid-cols-1 md:grid-cols-2 gap-6 text-gray-800">
-              <div className="flex items-start gap-4">
-                <span className="text-red-700 mt-1">
-                  <Icon icon={faClock} className="w-7" />
-                </span>
-                <div>
-                  <h4 className="font-semibold">24/7 Emergency Services</h4>
-                  <p className="text-sm">
-                    Always available when you need us the most—day or night.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="text-red-700 mt-1">
-                  <Icon icon={faShieldAlt} className="w-7" />
-                </span>
-                <div>
-                  <h4 className="font-semibold">
-                    Licensed & Insured Professionals
-                  </h4>
-                  <p className="text-sm">
-                    Certified experts providing secure and trustworthy service.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="text-red-700 mt-1">
-                  <Icon icon={faBolt} className="w-7" />
-                </span>
-                <div>
-                  <h4 className="font-semibold">Fast Response Time</h4>
-                  <p className="text-sm">
-                    Rapid arrival and service to resolve your issues quickly.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="text-red-700 mt-1">
-                  <Icon icon={faBrain} className="w-7" />
-                </span>
-                <div>
-                  <h4 className="font-semibold">Advanced Security Solutions</h4>
-                  <p className="text-sm">
-                    Modern systems tailored to your home or business needs.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="text-red-700 mt-1">
-                  <Icon icon={faThumbsUp} className="w-7" />
-                </span>
-                <div>
-                  <h4 className="font-semibold">
-                    Customer Satisfaction Guarantee
-                  </h4>
-                  <p className="text-sm">
-                    Your safety and satisfaction are our highest priorities.
-                  </p>
-                </div>
+            <div className="my-10">
+              <h3 className="text-xl font-medium text-center text-red-700 mb-10">
+                Experience, Reliability, and Innovation
+              </h3>
+              <div className="grid text-left grid-cols-1 md:grid-cols-2 gap-6 text-gray-800">
+                <IconLabelCard
+                  icon={faClock}
+                  title="24/7 Emergency Services"
+                  description="Always available when you need us the most—day or night."
+                />
+                <IconLabelCard
+                  icon={faShieldAlt}
+                  title="Licensed & Insured Professionals"
+                  description="Certified experts providing secure and trustworthy service."
+                />
+                <IconLabelCard
+                  icon={faBolt}
+                  title="Fast Response Time"
+                  description="Rapid arrival and service to resolve your issues quickly."
+                />
+                <IconLabelCard
+                  icon={faBrain}
+                  title="Advanced Security Solutions"
+                  description="Modern systems tailored to your home or business needs."
+                />
+                <IconLabelCard
+                  icon={faThumbsUp}
+                  title="Customer Satisfaction Guarantee"
+                  description="Your safety and satisfaction are our highest priorities."
+                />
               </div>
             </div>
-          </div>
 
-          <div className="text-left flex gap-5 flex-col mt-5 text-gray-700 text-lg font-light">
             <p>
               We believe that The Best Way to Protect Our Customers is to
               provide them with Locksmith Services and Security Solutions that
@@ -347,26 +259,26 @@ export default function AboutPage() {
         </div>
 
         {/* content 3 */}
-        <div className="container max-w-xl mx-auto lg:max-w-4xl text-center my-32">
+        <div className="container max-w-xl mx-auto lg:max-w-4xl text-center">
           <SectionHeader
             subtitle="Meet Our Experts"
             title="The Team "
             description=""
           />
 
-          <div className="flex gap-10 justify-center flex-wrap text-left">
+          <div className="flex mt-5 gap-10 justify-center flex-wrap text-left">
             <div className="">
-              <div className="w-60 h-60 bg-blue-500 rounded-lg"></div>
+              <div className="w-60 h-60 bg-slate-500 rounded-lg"></div>
               <h3 className="mt-3 font-medium text-lg">Yaniv Bangtoto</h3>
               <p className="text-gray-700 text-sm">Chief Exutive Officer</p>
             </div>
             <div className="">
-              <div className="w-60 h-60 bg-green-500 rounded-lg"></div>
+              <div className="w-60 h-60 bg-slate-400 rounded-lg"></div>
               <h3 className="mt-3 font-medium text-lg">Yaniv Bangtoto</h3>
               <p className="text-gray-700 text-sm">Chief Exutive Officer</p>
             </div>
             <div className="">
-              <div className="w-60 h-60 bg-violet-500 rounded-lg"></div>
+              <div className="w-60 h-60 bg-slate-300 rounded-lg"></div>
               <h3 className="mt-3 font-medium text-lg">Yaniv Bangtoto</h3>
               <p className="text-gray-700 text-sm">Chief Exutive Officer</p>
             </div>
