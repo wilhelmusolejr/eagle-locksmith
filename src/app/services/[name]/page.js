@@ -25,6 +25,19 @@ let servicesList = [
     image_alt: "Commercial image",
     icon: faBuilding,
     title: "Commercial",
+    service: {
+      header: "Commercial Locksmith Services For Businesses and Offices",
+      paragraphs: [
+        "We are a trusted 24 / 7 commercial locksmith serving in Maryland and Washington DC area. You can call us for your business security or lockout needs. Over 35 years of experience doing home or business locksmith work in the Maryland and Washington DC area. Our commercial locksmith services are available for you at Eagle Locksmith. We are here available 24 hours a day, Seven days a week, 365 days a year. All of our technicians are fully, licensed and bonded.",
+        "Eagle Locksmith keeping your building safe and secure. You need a secure building to run the business properly. So with that concept, we are there to help you with the reliable services. You can count on our high quality, efficient locksmith and security system service to keep your area secure, whether you need; new keys or a complete system installation. Our great prices for your secure system. You can have support from us as our locksmith services are too good it’s all-time available to clear your all the projects of the locks.",
+        "In such various suspects, you can have all the reliable services of the locks. We are ever ready in 24 hours with the good solutions. We can provide you all the better ways of the services to give your better terms of tech solutions. In our all means of the services, you can get such better reliable services. We can help you with the valid techniques which are available to clear all the problems of the locks with tech all reliable service of the lock’s settlement.",
+        "For our commercial place we all need is one safest place where we can get such place of the commercial safe. We can help you with the prior means we all need is a technician who will help you with the good base of the technical need. We are always there to help you with the preferable services of the locks repair. In such means, you can get all the better terms of the reliable services of the lock’s settlement. You can easily get all the services for the repair of the locks.",
+      ],
+      title: "Commercial locksmith",
+      description:
+        "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
+    },
+
     description:
       "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
   },
@@ -114,29 +127,18 @@ export default async function ServicePage({ params }) {
 
       {/* HEADER */}
       <header>
-        <div className="flex flex-col h-[50vh] text-white content-header">
+        <div className="flex flex-col min-h-[60vh] text-white content-header">
           {/* Make the header take up the remaining space */}
           <div className="z-10 flex items-center justify-center flex-grow header">
             <div className="text-center text">
               <p className="font-bold tracking-wide text-orange-400 uppercase">
-                Trusted Eagle Locksmith
+                Eagle Locksmith Service
               </p>
-              <h1 className="xl:text-7xl text-5xl font-bold capitalize xl:w-10/12 mx-auto md:leading-normal">
-                {service.title}
+              <h1 className="xl:text-7xl text-5xl font-bold capitalize  mx-auto md:leading-normal">
+                {service.service.title}
               </h1>
               <p className="pt-5 py-10 max-w-2xl xl:text-xl mx-auto text-gray-300">
-                We want to make sure your entire process is{" "}
-                <span className="font-semibold text-white uppercase">
-                  stress free
-                </span>
-                ,{" "}
-                <span className="font-semibold text-white uppercase">
-                  simple
-                </span>{" "}
-                , and more importantly,{" "}
-                <span className="font-semibold text-white uppercase">
-                  affordable
-                </span>
+                {service.service.description}
               </p>
 
               {/* CTA */}
@@ -168,38 +170,9 @@ export default async function ServicePage({ params }) {
           </SectionHeading>
 
           <div className="text-left flex gap-5 flex-col mt-15 text-gray-700 text-lg font-light">
-            <p>
-              We are a trusted 24 / 7 commercial locksmith serving in Maryland
-              and Washington DC area. You can call us for your business security
-              or lockout needs. Over 35 years of experience doing home or
-              business locksmith work in the Maryland and Washington DC area.
-              Our commercial locksmith services are available for you at Eagle
-              Locksmith. We are here available 24 hours a day, Seven days a
-              week, 365 days a year. All of our technicians are fully, licensed
-              and bonded.
-            </p>
-            <p>
-              Eagle Locksmith keeping your building safe and secure. You need a
-              secure building to run the business properly. So with that
-              concept, we are there to help you with the reliable services. You
-              can count on our high quality, efficient locksmith and security
-              system service to keep your area secure, whether you need; new
-              keys or a complete system installation. Our great prices for your
-              secure system. You can have support from us as our locksmith
-              services are too good it’s all-time available to clear your all
-              the projects of the locks.
-            </p>
-            <p>
-              Eagle Locksmith keeping your building safe and secure. You need a
-              secure building to run the business properly. So with that
-              concept, we are there to help you with the reliable services. You
-              can count on our high quality, efficient locksmith and security
-              system service to keep your area secure, whether you need; new
-              keys or a complete system installation. Our great prices for your
-              secure system. You can have support from us as our locksmith
-              services are too good it’s all-time available to clear your all
-              the projects of the locks.
-            </p>
+            {service.service.paragraphs.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
 
             {/* CTA */}
             <div className="cta flex items-center justify-center text-white mt-15">
