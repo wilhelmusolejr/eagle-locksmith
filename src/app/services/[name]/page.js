@@ -18,7 +18,6 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
 import MapSection from "@/components/sections/MapSection";
 import FooterSection from "@/components/sections/FooterSection";
 import Link from "next/link";
-import Head from "next/head";
 
 let servicesList = [
   {
@@ -73,8 +72,10 @@ let servicesList = [
 
 // ✅ Set page metadata dynamically
 export async function generateMetadata({ params }) {
+  const { name } = await params; // params should be accessed directly here
+
   const service = servicesList.find(
-    (item) => item.title.toLowerCase() === params.name.toLowerCase()
+    (item) => item.title.toLowerCase() === name.toLowerCase()
   );
 
   if (!service) {
