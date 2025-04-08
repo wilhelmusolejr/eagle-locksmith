@@ -92,7 +92,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ServicePage({ params }) {
-  const { name } = await params; // params should be accessed directly here
+  const { name } = await params;
 
   // Find the service based on the name from params
   const service = servicesList.find(

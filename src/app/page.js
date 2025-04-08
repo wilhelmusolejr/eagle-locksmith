@@ -10,15 +10,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import Image from "next/image";
-import Icon from "@/components/Icon";
-import Logo from "@/components/Logo";
 import SectionHeader from "@/components/SectionHeader";
 import ServiceCard from "@/components/ServiceCard";
 import AdvancedItem from "@/components/AdvancedItem";
 import SectionHeading from "@/components/SectionHeading";
-import LabelInput from "@/components/LabelInput";
-import SocialItem from "@/components/SocialItem";
-import WhyCard from "@/components/WhyCard";
 import MiniHeader from "@/components/MiniHeader";
 import Navigator from "@/components/Navigator";
 import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
@@ -27,8 +22,6 @@ import ReviewsSection from "@/components/sections/ReviewsSection";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import MapSection from "@/components/sections/MapSection";
 import FooterSection from "@/components/sections/FooterSection";
-
-import Head from "next/head";
 
 export default async function Home() {
   let servicesList = [
@@ -92,10 +85,6 @@ export default async function Home() {
 
   return (
     <>
-      <Head>
-        <title>{`Eagle Locksmith`}</title>
-      </Head>
-
       {/* MINI HEADER */}
       <MiniHeader />
 

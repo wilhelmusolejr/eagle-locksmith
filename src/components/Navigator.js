@@ -16,7 +16,7 @@ export default function Navigator() {
               <Link href="/">Home</Link>
             </li>
             <li className="">
-              <a href="#">About us</a>
+              <Link href="/about">About us</Link>
             </li>
             <li className="">
               <a href="#">Services</a>
