@@ -1,14 +1,23 @@
+"use client";
+
 import Logo from "./Logo";
 import Icon from "./Icon";
-import {
-  faAngleDown,
-  faBars,
-  faD,
-  faDownLong,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faBars } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navigator() {
+  const pathname = usePathname();
+
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "About us", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Locations", path: "/locations" },
+    { name: "Blog", path: "#" },
+    { name: "Contact us", path: "/contact" },
+  ];
+
   return (
     <nav className="z-20 navigator text-white shadow-lg sticky top-0">
       <div className="flex items-center justify-between px-5 xl:px-10 py-7 ">
@@ -17,10 +26,10 @@ export default function Navigator() {
           <Logo size={70} className="w-fit" />
 
           <ul className="capitalize font-light items-center gap-5 hidden lg:flex text-xl">
-            <li className="font-bold">
+            <li className={`${pathname === "/" ? "font-bold" : ""}`}>
               <Link href="/">Home</Link>
             </li>
-            <li className="">
+            <li className={`${pathname === "/about" ? "font-bold" : ""}`}>
               <Link href="/about">About us</Link>
             </li>
 
@@ -56,19 +65,20 @@ export default function Navigator() {
                 </li>
               </ul>
             </li>
-            <li className="">
+
+            <li className={`${pathname === "/locations" ? "font-bold" : ""}`}>
               <Link href="/locations">Locations</Link>
             </li>
-            <li className="">
-              <a href="#">Blog</a>
+            <li className={`${pathname === "/blog" ? "font-bold" : ""}`}>
+              <a href="/blog">Blog</a>
             </li>
-            <li className="">
+            <li className={`${pathname === "/contact" ? "font-bold" : ""}`}>
               <Link href="/contact">Contact us</Link>
             </li>
           </ul>
         </div>
 
-        <div className="flex flex-row gap-5">
+        <div className="flex items-center flex-row gap-5">
           {/* CTA */}
           <div className="cta">
             <button className="p-3 md:text-2xl shadow-2xl cursor-pointer font-bold uppercase bg-red-700 rounded-md btn btn-primary hover:bg-red-800 hover:shadow-xl transition-all duration-300">
@@ -77,7 +87,7 @@ export default function Navigator() {
           </div>
 
           {/* BAR */}
-          <Icon icon={faBars} className="w-7 lg:hidden" />
+          <Icon icon={faBars} className="w-7 custom-nav-toggle" />
         </div>
       </div>
     </nav>

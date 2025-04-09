@@ -303,7 +303,7 @@ export default function LocationPage() {
               <h3 className="text-xl font-medium text-center  text-red-700 mb-10">
                 Cities & Communities We Serve
               </h3>
-              <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 p-4 text-gray-700">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 p-4 text-gray-700">
                 {locations.map((location, index) => (
                   <li key={index} className="flex items-center gap-2 ">
                     <Icon icon={faLocationDot} className={"w-4"} />

@@ -125,3 +125,14 @@ nav.navigator {
     overflow: hidden; /* optional: to make sure child elements like ::after respect the radius */
   }
 }
+
+@media (min-width: 1024px) {
+  .custom-nav-toggle {
+    display: none !important;
+  }
+}
+
+svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
