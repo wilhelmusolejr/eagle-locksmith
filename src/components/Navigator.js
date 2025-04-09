@@ -57,13 +57,13 @@ export default function Navigator() {
               </ul>
             </li>
             <li className="">
-              <a href="#">Locations</a>
+              <Link href="/locations">Locations</Link>
             </li>
             <li className="">
               <a href="#">Blog</a>
             </li>
             <li className="">
-              <a href="#">Contact us</a>
+              <Link href="/contact">Contact us</Link>
             </li>
           </ul>
         </div>
