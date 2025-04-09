@@ -65,6 +65,22 @@ nav.navigator {
   z-index: 1;
 }
 
+.black-overlay {
+  position: relative;
+  background-size: cover;
+}
+.black-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #212121;
+  opacity: 0.6;
+  z-index: 1;
+}
+
 .bsad {
   position: relative;
 

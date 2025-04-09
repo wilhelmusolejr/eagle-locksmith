@@ -6,11 +6,12 @@ export default function ServiceCard({
   image_alt,
   icon,
   title,
+  path,
   description,
 }) {
   return (
     <a
-      href={`/services/${title.toLowerCase()}`}
+      href={`/services/${path.toLowerCase()}`}
       className="rounded-lg shadow bg-orange w-80  "
     >
       {/* image */}

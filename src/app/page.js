@@ -22,56 +22,74 @@ import ReviewsSection from "@/components/sections/ReviewsSection";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import MapSection from "@/components/sections/MapSection";
 import FooterSection from "@/components/sections/FooterSection";
+import ButtonCallUsToday from "@/components/ButtonCallUsToday";
 
 export default async function Home() {
   let servicesList = [
+    // COMMERCIAL
     {
       image_path: "/images/services/commercial.jpg",
       image_alt: "Commercial image",
       icon: faBuilding,
-      title: "Commercial",
-      description:
-        "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
+      path: "commercial-locksmith",
+      page: {
+        header: "Commercial Locksmith Services For Businesses and Offices",
+        title: "Commercial locksmith",
+        description:
+          "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
+      },
     },
+    // RESIDENTIAL
     {
       image_path: "/images/services/residential.jpg",
       image_alt: "Residential image",
       icon: faHome,
-      title: "Residential",
-      description:
-        "Lockout service, lock repair and installation, rekeying, security audits, and more.",
+      path: "residential-locksmith",
+      page: {
+        header: "Commercial Locksmith Services For Businesses and Offices",
+        title: "Residential locksmith",
+        description:
+          "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
+      },
     },
+    // EMERGENCY
     {
       image_path: "/images/services/emergency.jpg",
       image_alt: "Emergency image",
       icon: faExclamationTriangle,
-      title: "Emergency",
-      description:
-        "Lockout service, lock repair and installation, rekeying, security audits, and more.",
+      path: "emergency-locksmith",
+      page: {
+        header: "Commercial Locksmith Services For Businesses and Offices",
+        title: "Emergency Locksmith",
+        description:
+          "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
+      },
     },
+    // AUTOMOTIVE
     {
       image_path: "/images/services/automotive.jpg",
       image_alt: "Automotive image",
       icon: faCar,
-      title: "Automotive",
-      description:
-        "We provide a wide range of automotive locksmith services, including lock repairs, installations, and security upgrades.",
+      path: "automotive-locksmith",
+      page: {
+        header: "Commercial Locksmith Services For Businesses and Offices",
+        title: "Automotive Locksmith",
+        description:
+          "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
+      },
     },
+    // SAFE
     {
       image_path: "/images/services/safe.jpg",
       image_alt: "Safe image",
       icon: faVault,
-      title: "Safe",
-      description:
-        "We provide a wide range of safe locksmith services, including lock repairs, installations, and security upgrades.",
-    },
-    {
-      image_path: "/images/services/commercial.jpg",
-      image_alt: "Commercial image",
-      icon: faBuilding,
-      title: "Commercial",
-      description:
-        "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
+      path: "safe-locksmith",
+      page: {
+        header: "Commercial Locksmith Services For Businesses and Offices",
+        title: "Safe Locksmith",
+        description:
+          "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
+      },
     },
   ];
 
@@ -195,8 +213,9 @@ export default async function Home() {
                 image_path={service.image_path}
                 image_alt={service.image_alt}
                 icon={service.icon}
-                title={service.title}
-                description={service.description}
+                path={service.path}
+                title={service.page.title}
+                description={service.page.description}
               />
             ))}
           </div>

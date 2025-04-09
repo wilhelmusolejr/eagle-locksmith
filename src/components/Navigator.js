@@ -1,6 +1,11 @@
 import Logo from "./Logo";
 import Icon from "./Icon";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAngleDown,
+  faBars,
+  faD,
+  faDownLong,
+} from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 export default function Navigator() {
@@ -18,8 +23,38 @@ export default function Navigator() {
             <li className="">
               <Link href="/about">About us</Link>
             </li>
-            <li className="">
-              <a href="#">Services</a>
+
+            {/* drop down */}
+            <li className="relative group">
+              <button className="focus:outline-none">
+                Services
+                <Icon icon={faAngleDown} className="w-4 inline-block ml-2" />
+              </button>
+              <ul className="absolute top-full left-0 w-40 bg-white text-black shadow-lg rounded-md opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 z-50">
+                <li className="px-4 py-2 text-lg hover:bg-gray-100">
+                  <Link href="/services/commercial-locksmith">
+                    Commercial Locksmith
+                  </Link>
+                </li>
+                <li className="px-4 py-2 text-lg hover:bg-gray-100">
+                  <Link href="/services/residential-locksmith">
+                    Residential Locksmith
+                  </Link>
+                </li>
+                <li className="px-4 py-2 text-lg hover:bg-gray-100">
+                  <Link href="/services/emergency-locksmith">
+                    Emergency Locksmith
+                  </Link>
+                </li>
+                <li className="px-4 py-2 text-lg hover:bg-gray-100">
+                  <Link href="/services/automotive-locksmith">
+                    Automotive Locksmith
+                  </Link>
+                </li>
+                <li className="px-4 py-2 text-lg hover:bg-gray-100">
+                  <Link href="/services/safe-locksmith">Safe Locksmith</Link>
+                </li>
+              </ul>
             </li>
             <li className="">
               <a href="#">Locations</a>
