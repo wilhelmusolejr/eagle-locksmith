@@ -29,6 +29,8 @@ import Icon from "@/components/Icon";
 import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import IconLabelCard from "@/components/IconLabelCard";
+import ButtonCallUsWithNum from "@/components/ButtonCallUsWithNum";
+import PageHeader from "@/components/PageHeader";
 
 export default function AboutPage() {
   return (
@@ -41,16 +43,14 @@ export default function AboutPage() {
 
       {/* HEADER */}
       <header>
-        <div className="flex flex-col h-[50vh] text-white content-header">
+        <div className="flex flex-col h-[50vh] text-white bg-[url('/images/about/background.png')] bg-cover bg-center bg-no-repeat black-overlay">
           {/* Make the header take up the remaining space */}
           <div className="z-10 flex items-center justify-center flex-grow header">
             <div className="text-center text">
               <p className="font-bold hidden tracking-wide text-orange-400 uppercase">
                 Trusted Eagle Locksmith
               </p>
-              <h1 className="xl:text-7xl text-5xl font-bold capitalize xl:w-10/12 mx-auto md:leading-normal">
-                About Us
-              </h1>
+              <PageHeader>About Us</PageHeader>
               <p className="pt-5 py-10 max-w-2xl xl:text-xl mx-auto text-gray-300">
                 We want to make sure your entire process is{" "}
                 <span className="font-semibold text-white uppercase">
@@ -67,14 +67,7 @@ export default function AboutPage() {
               </p>
 
               {/* CTA */}
-              <div className="cta flex items-center justify-center">
-                <button className="bg-red-700 font-bold rounded-lg uppercase md:text-2xl shadow-lg flex items-center">
-                  <div className="p-3 bg-red-800 rounded-lg ">
-                    <FontAwesomeIcon icon={faPhone} className="w-7" />
-                  </div>
-                  <div className="p-3">Call us today!</div>
-                </button>
-              </div>
+              <ButtonCallUsWithNum />
             </div>
           </div>
         </div>
@@ -84,8 +77,9 @@ export default function AboutPage() {
       <div className="px-5 py-32 parent">
         {/* content 1 */}
         <div className="container max-w-xl mx-auto lg:max-w-4xl text-center">
-          <SectionHeading>Your Trusted Partner in Security</SectionHeading>
-
+          <SectionHeading type="small">
+            Your Trusted Partner in Security
+          </SectionHeading>
           <div className="text-left flex gap-5 flex-col mt-15 text-gray-700 text-lg font-light">
             <p>
               At Eagle Locksmith, we’ve built our reputation by delivering fast,

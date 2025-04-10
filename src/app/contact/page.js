@@ -29,6 +29,7 @@ import Icon from "@/components/Icon";
 import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import IconLabelCard from "@/components/IconLabelCard";
+import PageHeader from "@/components/PageHeader";
 
 export default function ContactPage() {
   return (
@@ -41,15 +42,13 @@ export default function ContactPage() {
 
       {/* HEADER */}
       <header>
-        <div className="flex flex-col h-[50vh] text-white content-header">
+        <div className="flex flex-col h-[50vh] text-white bg-[url('/images/contact/background.jpg')] bg-cover bg-center bg-no-repeat black-overlay">
           <div className="z-10 flex items-center justify-center flex-grow header">
             <div className="text-center text">
-              <p className="font-bold tracking-wide text-orange-400 uppercase">
+              <p className="font-bold hidden tracking-wide text-orange-400 uppercase">
                 Get in Touch
               </p>
-              <h1 className="xl:text-7xl text-5xl font-bold capitalize xl:w-10/12 mx-auto md:leading-normal">
-                Contact Us!
-              </h1>
+              <PageHeader>Contact Us!</PageHeader>
               <p className="pt-5 py-10 max-w-2xl xl:text-xl mx-auto text-gray-300">
                 We're here to help you with any locksmith needs—day or night.
                 Reach out and our team will respond promptly.

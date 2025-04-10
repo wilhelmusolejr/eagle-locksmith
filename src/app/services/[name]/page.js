@@ -732,7 +732,7 @@ export default async function ServicePage({ params }) {
             / {service.path}
           </div>
 
-          <SectionHeading>{service.page.header}</SectionHeading>
+          <SectionHeading type="small">{service.page.header}</SectionHeading>
 
           <div className="text-left flex gap-5 flex-col mt-15 text-gray-700 text-lg font-light">
             {service.content.map((block, i) => {

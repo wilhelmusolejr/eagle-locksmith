@@ -30,6 +30,8 @@ import Icon from "@/components/Icon";
 import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import IconLabelCard from "@/components/IconLabelCard";
+import PageHeader from "@/components/PageHeader";
+import ButtonCallUsWithNum from "@/components/ButtonCallUsWithNum";
 
 export default function LocationPage() {
   const locations = [
@@ -251,9 +253,7 @@ export default function LocationPage() {
               <p className="font-bold hidden tracking-wide text-orange-400 uppercase">
                 Trusted Eagle Locksmith
               </p>
-              <h1 className="xl:text-7xl text-5xl font-bold capitalize xl:w-10/12 mx-auto md:leading-normal">
-                Eagle Locksmith in the DMV Area
-              </h1>
+              <PageHeader>Eagle Locksmith in the DMV Area</PageHeader>
               <p className="pt-5 py-10 max-w-2xl xl:text-xl mx-auto text-gray-300">
                 We want to make sure your entire process is{" "}
                 <span className="font-semibold text-white uppercase">
@@ -270,14 +270,7 @@ export default function LocationPage() {
               </p>
 
               {/* CTA */}
-              <div className="cta flex items-center justify-center">
-                <button className="bg-red-700 font-bold rounded-lg uppercase md:text-2xl shadow-lg flex items-center">
-                  <div className="p-3 bg-red-800 rounded-lg ">
-                    <FontAwesomeIcon icon={faPhone} className="w-7" />
-                  </div>
-                  <div className="p-3">Call us today!</div>
-                </button>
-              </div>
+              <ButtonCallUsWithNum />
             </div>
           </div>
         </div>
@@ -287,7 +280,7 @@ export default function LocationPage() {
       <div className="px-5 py-32 parent">
         {/* content 1 */}
         <div className="container max-w-xl mx-auto lg:max-w-4xl text-center">
-          <SectionHeading>
+          <SectionHeading type="small">
             24/7 Locksmith Services in Washington D.C., Maryland & Virginia
           </SectionHeading>
 
