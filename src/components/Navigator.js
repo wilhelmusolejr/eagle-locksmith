@@ -26,10 +26,18 @@ export default function Navigator() {
           <Logo size={70} className="w-fit" />
 
           <ul className="capitalize font-light items-center gap-5 hidden lg:flex text-xl">
-            <li className={`${pathname === "/" ? "font-bold" : ""}`}>
+            <li
+              className={`${
+                pathname === "/" ? "font-bold" : ""
+              } hover:underline transition-all duration-300`}
+            >
               <Link href="/">Home</Link>
             </li>
-            <li className={`${pathname === "/about" ? "font-bold" : ""}`}>
+            <li
+              className={`${
+                pathname === "/about" ? "font-bold" : ""
+              } hover:underline transition-all duration-300`}
+            >
               <Link href="/about">About us</Link>
             </li>
 
@@ -66,13 +74,25 @@ export default function Navigator() {
               </ul>
             </li>
 
-            <li className={`${pathname === "/locations" ? "font-bold" : ""}`}>
+            <li
+              className={`${
+                pathname === "/locations" ? "font-bold" : ""
+              } hover:underline transition-all duration-300`}
+            >
               <Link href="/locations">Locations</Link>
             </li>
-            <li className={`${pathname === "/blog" ? "font-bold" : ""}`}>
+            <li
+              className={`${
+                pathname === "/blog" ? "font-bold" : ""
+              } hover:underline transition-all duration-300`}
+            >
               <a href="/blog">Blog</a>
             </li>
-            <li className={`${pathname === "/contact" ? "font-bold" : ""}`}>
+            <li
+              className={`${
+                pathname === "/contact" ? "font-bold" : ""
+              } hover:underline transition-all duration-300`}
+            >
               <Link href="/contact">Contact us</Link>
             </li>
           </ul>

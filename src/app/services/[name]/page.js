@@ -46,6 +46,7 @@ import IconLabelCard from "@/components/IconLabelCard";
 import SectionHeader from "@/components/SectionHeader";
 import ButtonCallUsToday from "@/components/ButtonCallUsToday";
 import Image from "next/image";
+import ButtonCallUsWithNum from "@/components/ButtonCallUsWithNum";
 
 let servicesList = [
   // COMMERCIAL
@@ -91,7 +92,7 @@ let servicesList = [
       },
       {
         type: "call_us_button",
-        text: <ButtonCallUsToday />,
+        text: <ButtonCallUsWithNum />,
       },
       {
         type: "paragraph",
@@ -257,7 +258,7 @@ let servicesList = [
       },
       {
         type: "call_us_button",
-        text: <ButtonCallUsToday />,
+        text: <ButtonCallUsWithNum />,
       },
       {
         type: "header",
@@ -332,7 +333,7 @@ let servicesList = [
       },
       {
         type: "call_us_button",
-        text: <ButtonCallUsToday />,
+        text: <ButtonCallUsWithNum />,
       },
       {
         type: "list_icon",
@@ -443,6 +444,10 @@ let servicesList = [
       {
         type: "image",
         src: "/images/services/automotive1.jpg",
+      },
+      {
+        type: "call_us_button",
+        text: <ButtonCallUsWithNum />,
       },
       { type: "header", text: "Professional Automobile Locksmith Services" },
       {
@@ -568,7 +573,7 @@ let servicesList = [
       },
       {
         type: "call_us_button",
-        text: <ButtonCallUsToday />,
+        text: <ButtonCallUsWithNum />,
       },
       {
         type: "paragraph",
@@ -709,14 +714,7 @@ export default async function ServicePage({ params }) {
               </p>
 
               {/* CTA */}
-              <div className="cta flex items-center justify-center">
-                <button className="bg-red-700 font-bold rounded-lg uppercase md:text-2xl shadow-lg flex items-center">
-                  <div className="p-3 bg-red-800 rounded-lg ">
-                    <FontAwesomeIcon icon={faPhone} className="w-7" />
-                  </div>
-                  <div className="p-3">Call us today!</div>
-                </button>
-              </div>
+              <ButtonCallUsWithNum />
             </div>
           </div>
         </div>

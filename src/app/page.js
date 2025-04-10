@@ -23,6 +23,7 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
 import MapSection from "@/components/sections/MapSection";
 import FooterSection from "@/components/sections/FooterSection";
 import ButtonCallUsToday from "@/components/ButtonCallUsToday";
+import ButtonCallUsWithNum from "@/components/ButtonCallUsWithNum";
 
 export default async function Home() {
   let servicesList = [
@@ -136,14 +137,7 @@ export default async function Home() {
               </p>
 
               {/* CTA */}
-              <div className="cta flex items-center justify-center">
-                <button className="bg-red-700 font-bold rounded-lg uppercase md:text-2xl shadow-lg flex items-center">
-                  <div className="p-3 bg-red-800 rounded-lg ">
-                    <FontAwesomeIcon icon={faPhone} className="w-7" />
-                  </div>
-                  <div className="p-3">Call us today!</div>
-                </button>
-              </div>
+              <ButtonCallUsWithNum />
             </div>
           </div>
         </div>
@@ -163,8 +157,10 @@ export default async function Home() {
             />
           </div>
           {/* right */}
-          <div className=" fontlight">
-            <SectionHeading>Eagle locksmith services</SectionHeading>
+          <div className="">
+            <SectionHeading type="small">
+              Eagle locksmith services
+            </SectionHeading>
             <p className="pt-2 font-medium text-blue-800 text-lg">
               Get the best quality security solutions for all your lock and
               key-related issues with us in Maryland, DC And Virginia.
@@ -178,14 +174,7 @@ export default async function Home() {
               call us on (855) 633-2453.
             </p>
 
-            <div className="text-white cta">
-              <button className="bg-blue-800 font-bold rounded-lg uppercase md:text-2xl shadow-lg flex items-center">
-                <div className="p-3 bg-blue rounded-lg ">
-                  <FontAwesomeIcon icon={faPhone} className="w-7" />
-                </div>
-                <div className="p-3">Call us today!</div>
-              </button>
-            </div>
+            <ButtonCallUsWithNum color="blue" />
           </div>
         </div>
       </div>

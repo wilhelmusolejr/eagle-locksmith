@@ -131,3 +131,25 @@ nav.navigator {
     display: none !important;
   }
 }
+
+.marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 1.25rem; /* same as Tailwind gap-5 */
+  width: max-content;
+  animation: marquee 100s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
