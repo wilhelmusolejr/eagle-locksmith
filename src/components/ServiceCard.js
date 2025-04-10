@@ -31,7 +31,7 @@ export default function ServiceCard({
       <div className="relative p-5 text-white font-light ">
         {/* icon */}
         <div className="flex absolute top-[-50px] items-center justify-center w-20 h-20 p-5 bg-white rounded-lg ">
-          <Icon icon={icon} className="text-orange-400 w-7" />
+          <Icon icon={icon} className="text-orange-400 text-2xl" />
         </div>
         <h3 className="mt-10 mb-5 text-2xl font-semibold uppercase">{title}</h3>
         <p className="text-left">{description}</p>

@@ -6,7 +6,7 @@ export default function WhyCard({ icon, title, description }) {
     <div className="px-5 py-10 text-center border border-gray-700 card rounded-xl lg:min-h-96 flex items-center justify-center flex-col mx-auto">
       {/* icon */}
       <div className="flex items-center justify-center">
-        <Icon icon={icon} className="text-orange-400 w-15" />
+        <Icon icon={icon} className="text-orange-400 text-4xl" />
       </div>
 
       <div className="">
