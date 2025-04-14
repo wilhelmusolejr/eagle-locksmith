@@ -34,7 +34,6 @@ export default function ReviewCard({ desription, name, link }) {
     "bg-zinc-500",
     "bg-gray-500",
     "bg-slate-500",
-    "bg-lightBlue-500",
   ];
 
   let chosenColor =
@@ -42,6 +41,7 @@ export default function ReviewCard({ desription, name, link }) {
 
   return (
     <a
+      target="_blank"
       href={link}
       className="w-80 min-w-80 bg-white rounded-lg shadow review-card container flex flex-col p-5 min-h-72 justify-between h-full"
     >

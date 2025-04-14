@@ -1,18 +1,13 @@
 // app/about/page.js
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faBuilding,
-  faCheckDouble,
   faHome,
   faPhone,
-  faExclamationTriangle,
   faCar,
   faVault,
   faKey,
-  faLock,
   faVideo,
   faIdCard,
-  faBox,
   faClock,
   faShieldAlt,
   faBolt,
@@ -110,7 +105,7 @@ export default function AboutPage() {
 
             <div className="my-10">
               <h3 className="text-xl font-medium text-center  text-red-700 mb-10">
-                Experience, Reliability, and Innovation
+                Protecting What Matters Most
               </h3>
               <div className="grid grid-cols-1 my-5 md:grid-cols-2 gap-6 text-gray-800">
                 <IconLabelCard
@@ -209,7 +204,7 @@ export default function AboutPage() {
 
             <div className="my-10">
               <h3 className="text-xl font-medium text-center text-red-700 mb-10">
-                Experience, Reliability, and Innovation
+                What Sets Us Apart
               </h3>
               <div className="grid text-left grid-cols-1 md:grid-cols-2 gap-6 text-gray-800">
                 <IconLabelCard

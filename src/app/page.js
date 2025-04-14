@@ -1,9 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBuilding,
   faCheckDouble,
   faHome,
-  faPhone,
   faExclamationTriangle,
   faCar,
   faVault,
@@ -22,7 +20,6 @@ import ReviewsSection from "@/components/sections/ReviewsSection";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import MapSection from "@/components/sections/MapSection";
 import FooterSection from "@/components/sections/FooterSection";
-import ButtonCallUsToday from "@/components/ButtonCallUsToday";
 import ButtonCallUsWithNum from "@/components/ButtonCallUsWithNum";
 
 export default async function Home() {
