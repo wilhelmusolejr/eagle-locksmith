@@ -1,37 +1,15 @@
 // app/about/page.js
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBuilding,
-  faCheckDouble,
-  faHome,
-  faPhone,
-  faExclamationTriangle,
-  faCar,
-  faVault,
-  faKey,
-  faLock,
-  faVideo,
-  faIdCard,
-  faBox,
-  faClock,
-  faShieldAlt,
-  faBolt,
-  faBrain,
-  faThumbsUp,
-  faLocationDot,
-} from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import Navigator from "@/components/Navigator";
 import MiniHeader from "@/components/MiniHeader";
-import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
 import MapSection from "@/components/sections/MapSection";
 import FooterSection from "@/components/sections/FooterSection";
 import Icon from "@/components/Icon";
 import Image from "next/image";
-import SectionHeader from "@/components/SectionHeader";
-import IconLabelCard from "@/components/IconLabelCard";
 import PageHeader from "@/components/PageHeader";
 import ButtonCallUsWithNum from "@/components/ButtonCallUsWithNum";
+import ListContainer from "@/components/ListContainer";
 
 export default function LocationPage() {
   const locations = [
@@ -250,11 +228,11 @@ export default function LocationPage() {
           {/* Make the header take up the remaining space */}
           <div className="z-10 flex items-center justify-center flex-grow header">
             <div className="text-center text">
-              <p className="font-bold hidden tracking-wide text-orange-400 uppercase">
+              <p className="hidden font-bold tracking-wide text-orange-400 uppercase">
                 Trusted Eagle Locksmith
               </p>
               <PageHeader>Eagle Locksmith in the DMV Area</PageHeader>
-              <p className="pt-5 py-10 max-w-2xl xl:text-xl mx-auto text-gray-300">
+              <p className="max-w-2xl py-10 pt-5 mx-auto text-gray-300 xl:text-xl">
                 We want to make sure your entire process is{" "}
                 <span className="font-semibold text-white uppercase">
                   stress free
@@ -279,12 +257,12 @@ export default function LocationPage() {
       {/* CONTENT */}
       <div className="px-5 py-32 parent">
         {/* content 1 */}
-        <div className="container max-w-xl mx-auto lg:max-w-4xl text-center">
+        <div className="container max-w-xl mx-auto text-center lg:max-w-4xl">
           <SectionHeading type="small">
             24/7 Locksmith Services in Washington D.C., Maryland & Virginia
           </SectionHeading>
 
-          <div className="text-left flex gap-5 flex-col mt-15 text-gray-700 text-lg font-light">
+          <div className="flex flex-col gap-5 text-lg font-light text-left text-gray-700 mt-15">
             <p>
               For Eagle Services, you can consider listing cities within the
               Washington, D.C., Maryland, and Virginia (DMV) area where you
@@ -293,10 +271,10 @@ export default function LocationPage() {
             </p>
 
             <div className="my-10">
-              <h3 className="text-xl font-medium text-center  text-red-700 mb-10">
+              <h3 className="mb-10 text-xl font-medium text-center text-red-700">
                 Cities & Communities We Serve
               </h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 p-4 text-gray-700">
+              <ul className="grid grid-cols-1 gap-2 p-4 text-gray-700 sm:grid-cols-2 md:grid-cols-3">
                 {locations.map((location, index) => (
                   <li key={index} className="flex items-center gap-2 ">
                     <Icon icon={faLocationDot} className={"w-4"} />
@@ -307,17 +285,17 @@ export default function LocationPage() {
             </div>
 
             {content.map((block, index) => (
-              <div key={`list-${index}`} className="text-black my-5">
+              <div key={`list-${index}`} className="my-5 text-black">
                 {block.header && (
-                  <h3 className="font-medium text-xl mb-5 text-red-700">
+                  <h3 className="mb-5 text-xl font-medium text-red-700">
                     {block.header}
                   </h3>
                 )}
-                <ul className="list-disc pl-5 space-y-1 text-gray-800">
-                  {block.items.map((item, z) => (
-                    <li key={`list-item-${index}-${z}`}>{item}</li>
-                  ))}
-                </ul>
+
+                <ListContainer
+                  className={"pl-5 space-y-1 text-gray-800 list-disc"}
+                  items={block.items}
+                />
               </div>
             ))}
 

@@ -47,6 +47,8 @@ import SectionHeader from "@/components/SectionHeader";
 import ButtonCallUsToday from "@/components/ButtonCallUsToday";
 import Image from "next/image";
 import ButtonCallUsWithNum from "@/components/ButtonCallUsWithNum";
+import ListContainer from "@/components/ListContainer";
+import IconLabelGridContainer from "@/components/IconLabelGridContainer";
 
 let servicesList = [
   // COMMERCIAL
@@ -706,10 +708,10 @@ export default async function ServicePage({ params }) {
               <p className="font-bold tracking-wide text-orange-400 uppercase">
                 Eagle Locksmith Service
               </p>
-              <h1 className="xl:text-7xl text-5xl font-bold capitalize  mx-auto md:leading-normal">
+              <h1 className="mx-auto text-5xl font-bold capitalize xl:text-7xl md:leading-normal">
                 {service.page.title}
               </h1>
-              <p className="pt-5 py-10 max-w-2xl xl:text-xl mx-auto text-gray-300">
+              <p className="max-w-2xl py-10 pt-5 mx-auto text-gray-300 xl:text-xl">
                 {service.page.description}
               </p>
 
@@ -722,9 +724,9 @@ export default async function ServicePage({ params }) {
 
       {/* CONTENT */}
       <div className="px-5 py-32 parent">
-        <div className="container max-w-xl mx-auto lg:max-w-4xl text-center">
-          <div className="text-left mb-15 uppercase">
-            <Link href="/" className="text-blue tracking-wide font-medium">
+        <div className="container max-w-xl mx-auto text-center lg:max-w-4xl">
+          <div className="text-left uppercase mb-15">
+            <Link href="/" className="font-medium tracking-wide text-blue">
               Services
             </Link>{" "}
             / {service.path}
@@ -732,7 +734,7 @@ export default async function ServicePage({ params }) {
 
           <SectionHeading type="small">{service.page.header}</SectionHeading>
 
-          <div className="text-left flex gap-5 flex-col mt-15 text-gray-700 text-lg font-light">
+          <div className="flex flex-col gap-5 text-lg font-light text-left text-gray-700 mt-15">
             {service.content.map((block, i) => {
               if (block.type === "paragraph") {
                 return block.text.map((text, j) => (
@@ -742,17 +744,17 @@ export default async function ServicePage({ params }) {
 
               if (block.type === "list") {
                 return (
-                  <div key={`list-${i}`} className="text-black my-5">
+                  <div key={`list-${i}`} className="my-5 text-black">
                     {block.header && (
-                      <h3 className="font-medium text-xl mb-5">
+                      <h3 className="mb-5 text-xl font-medium">
                         {block.header}
                       </h3>
                     )}
-                    <ul className="list-disc pl-5 space-y-1">
-                      {block.text.map((item, z) => (
-                        <li key={`list-item-${i}-${z}`}>{item}</li>
-                      ))}
-                    </ul>
+
+                    <ListContainer
+                      items={block.text}
+                      className={"list-disc pl-5 space-y-1"}
+                    />
                   </div>
                 );
               }
@@ -760,26 +762,18 @@ export default async function ServicePage({ params }) {
               if (block.type === "list_icon") {
                 return (
                   <div key={`list-icon-${i}`} className="my-10">
-                    <h3 className="text-xl font-medium text-center text-red-700 mb-10">
+                    <h3 className="mb-10 text-xl font-medium text-center text-red-700">
                       {block.header}
                     </h3>
-                    <div className="grid text-left grid-cols-1 md:grid-cols-2 gap-6 text-gray-800">
-                      {block.text.map((item, z) => (
-                        <IconLabelCard
-                          key={`icon-${item.title}-${z}`}
-                          icon={item.icon}
-                          title={item.title}
-                          description={item.description}
-                        />
-                      ))}
-                    </div>
+
+                    <IconLabelGridContainer items={block.text} />
                   </div>
                 );
               }
 
               if (block.type === "header") {
                 return (
-                  <h3 key={`header-${i}`} className="font-medium text-xl mb-5">
+                  <h3 key={`header-${i}`} className="mb-5 text-xl font-medium">
                     {block.text}
                   </h3>
                 );
@@ -793,7 +787,7 @@ export default async function ServicePage({ params }) {
                 return (
                   <div
                     key={`image-${i}-${block.src}`}
-                    className="w-full h-96 bg-white my-10 relative"
+                    className="relative w-full my-10 bg-white h-96"
                   >
                     <Image
                       src={block.src}
