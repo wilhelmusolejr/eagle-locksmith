@@ -15,6 +15,7 @@ export default function Navigator() {
   const pathname = usePathname();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isToggleDropdown, setIsToggleDropdown] = useState(false);
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -27,6 +28,10 @@ export default function Navigator() {
 
   const handleToggleClick = () => {
     setIsMenuOpen((prev) => !prev);
+  };
+
+  const handleDropdownClick = () => {
+    setIsToggleDropdown((prev) => !prev);
   };
 
   return (
@@ -151,16 +156,19 @@ export default function Navigator() {
                     <Link href="/about">About us</Link>
                   </li>
 
-                  {/* drop down */}
-                  <li className="relative group">
-                    <button className="focus:outline-none">
+                  <li className="relative">
+                    <button
+                      onClick={handleDropdownClick} // use your existing toggle
+                      className="flex items-center justify-between w-full px-4 py-2 text-left focus:outline-none"
+                    >
                       Services
-                      <Icon
-                        icon={faAngleDown}
-                        className="inline-block w-4 ml-2"
-                      />
+                      <Icon icon={faAngleDown} className="w-4 ml-2" />
                     </button>
-                    <ul className="absolute left-0 z-50 invisible w-40 text-black transition-all duration-300 bg-white rounded-md shadow-lg opacity-0 top-full group-hover:opacity-100 group-hover:visible">
+                    <ul
+                      className={`mt-2 space-y-2 bg-white rounded-md shadow-md text-black ${
+                        isToggleDropdown ? "block" : "hidden"
+                      }`}
+                    >
                       <li className="px-4 py-2 text-lg hover:bg-gray-100">
                         <Link href="/services/commercial-locksmith">
                           Commercial Locksmith
