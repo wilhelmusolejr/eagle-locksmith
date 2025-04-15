@@ -1,15 +1,5 @@
-import {
-  faBuilding,
-  faCheckDouble,
-  faHome,
-  faExclamationTriangle,
-  faCar,
-  faVault,
-} from "@fortawesome/free-solid-svg-icons";
-
 import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
-import ServiceCard from "@/components/ServiceCard";
 import SectionHeading from "@/components/SectionHeading";
 import MiniHeader from "@/components/MiniHeader";
 import Navigator from "@/components/Navigator";
