@@ -10,7 +10,6 @@ import {
 import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import ServiceCard from "@/components/ServiceCard";
-import AdvancedItem from "@/components/AdvancedItem";
 import SectionHeading from "@/components/SectionHeading";
 import MiniHeader from "@/components/MiniHeader";
 import Navigator from "@/components/Navigator";
@@ -22,76 +21,9 @@ import MapSection from "@/components/sections/MapSection";
 import FooterSection from "@/components/sections/FooterSection";
 import ButtonCallUsWithNum from "@/components/ButtonCallUsWithNum";
 import AdvancedContainer from "@/components/AdvancedContainer";
+import ServicesContainer from "@/components/ServicesContainer";
 
 export default async function Home() {
-  let servicesList = [
-    // COMMERCIAL
-    {
-      image_path: "/images/services/commercial.jpg",
-      image_alt: "Commercial image",
-      icon: faBuilding,
-      path: "commercial-locksmith",
-      page: {
-        header: "Commercial Locksmith Services For Businesses and Offices",
-        title: "Commercial locksmith",
-        description:
-          "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
-      },
-    },
-    // RESIDENTIAL
-    {
-      image_path: "/images/services/residential.jpg",
-      image_alt: "Residential image",
-      icon: faHome,
-      path: "residential-locksmith",
-      page: {
-        header: "Commercial Locksmith Services For Businesses and Offices",
-        title: "Residential locksmith",
-        description:
-          "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
-      },
-    },
-    // EMERGENCY
-    {
-      image_path: "/images/services/emergency.jpg",
-      image_alt: "Emergency image",
-      icon: faExclamationTriangle,
-      path: "emergency-locksmith",
-      page: {
-        header: "Commercial Locksmith Services For Businesses and Offices",
-        title: "Emergency Locksmith",
-        description:
-          "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
-      },
-    },
-    // AUTOMOTIVE
-    {
-      image_path: "/images/services/automotive.jpg",
-      image_alt: "Automotive image",
-      icon: faCar,
-      path: "automotive-locksmith",
-      page: {
-        header: "Commercial Locksmith Services For Businesses and Offices",
-        title: "Automotive Locksmith",
-        description:
-          "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
-      },
-    },
-    // SAFE
-    {
-      image_path: "/images/services/safe.jpg",
-      image_alt: "Safe image",
-      icon: faVault,
-      path: "safe-locksmith",
-      page: {
-        header: "Commercial Locksmith Services For Businesses and Offices",
-        title: "Safe Locksmith",
-        description:
-          "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
-      },
-    },
-  ];
-
   return (
     <>
       {/* MINI HEADER */}
@@ -184,20 +116,7 @@ export default async function Home() {
             }
           />
 
-          <div className="flex flex-wrap justify-center gap-7 ">
-            {/* card */}
-            {servicesList.map((service, index) => (
-              <ServiceCard
-                key={index}
-                image_path={service.image_path}
-                image_alt={service.image_alt}
-                icon={service.icon}
-                path={service.path}
-                title={service.page.title}
-                description={service.page.description}
-              />
-            ))}
-          </div>
+          <ServicesContainer />
         </div>
       </div>
 
