@@ -21,6 +21,7 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
 import MapSection from "@/components/sections/MapSection";
 import FooterSection from "@/components/sections/FooterSection";
 import ButtonCallUsWithNum from "@/components/ButtonCallUsWithNum";
+import AdvancedContainer from "@/components/AdvancedContainer";
 
 export default async function Home() {
   let servicesList = [
@@ -89,14 +90,6 @@ export default async function Home() {
           "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
       },
     },
-  ];
-
-  let advancedSecurityList = [
-    "24 hour emergency locksmith services & advanced security solutions.",
-    "24 Hour Locksmith Service for Commercial and Residential properties and Automobiles.",
-    "Locked out? Lost a key? Skilled locksmith technicians available 24 hours a day.",
-    "100% satisfaction guarantee.",
-    "Our dedicated staff of dispatchers & locksmiths are committed to providing the highest quality service possible.",
   ];
 
   return (
@@ -226,11 +219,7 @@ export default async function Home() {
     Whether you need a new security system or key removal.`}
           />
 
-          <div className="flex flex-col gap-5 mt-10">
-            {advancedSecurityList.map((item, index) => (
-              <AdvancedItem key={index} icon={faCheckDouble} paragraph={item} />
-            ))}
-          </div>
+          <AdvancedContainer />
         </div>
       </div>
 
