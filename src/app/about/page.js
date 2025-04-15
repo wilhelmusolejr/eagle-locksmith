@@ -1,5 +1,4 @@
 // app/about/page.js
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
   faPhone,
@@ -14,20 +13,91 @@ import {
   faBrain,
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
+
 import Navigator from "@/components/Navigator";
 import MiniHeader from "@/components/MiniHeader";
-import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
 import MapSection from "@/components/sections/MapSection";
 import FooterSection from "@/components/sections/FooterSection";
-import Icon from "@/components/Icon";
 import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import IconLabelCard from "@/components/IconLabelCard";
 import ButtonCallUsWithNum from "@/components/ButtonCallUsWithNum";
 import PageHeader from "@/components/PageHeader";
+import IconLabelGridContainer from "@/components/IconLabelGridContainer";
 
 export default function AboutPage() {
+  const iconLabel1 = [
+    {
+      icon: faKey,
+      title: "Master Key Systems",
+      description:
+        "Custom-designed, professionally installed, and regularly maintained.",
+    },
+    {
+      icon: faHome,
+      title: "High-Security Locks",
+      description:
+        "Top-tier locks for both residential and commercial protection.",
+    },
+    {
+      icon: faVideo,
+      title: "CCTV Systems",
+      description:
+        "Closed-circuit video surveillance for safety and monitoring.",
+    },
+    {
+      icon: faIdCard,
+      title: "Access Control",
+      description: "Card-based or digital access systems for restricted areas.",
+    },
+    {
+      icon: faPhone,
+      title: "Telephone Access",
+      description:
+        "Secure entry for offices and residential buildings via intercom systems.",
+    },
+    {
+      icon: faCar,
+      title: "Automotive Locks",
+      description: "High-security solutions for domestic and foreign vehicles.",
+    },
+    {
+      icon: faVault,
+      title: "Safes",
+      description:
+        "Sales, delivery, and maintenance of commercial and residential safes.",
+    },
+  ];
+  const iconLabel2 = [
+    {
+      icon: faClock,
+      title: "24/7 Emergency Services",
+      description: "Always available when you need us the most—day or night.",
+    },
+    {
+      icon: faShieldAlt,
+      title: "Licensed & Insured Professionals",
+      description:
+        "Certified experts providing secure and trustworthy service.",
+    },
+    {
+      icon: faBolt,
+      title: "Fast Response Time",
+      description: "Rapid arrival and service to resolve your issues quickly.",
+    },
+    {
+      icon: faBrain,
+      title: "Advanced Security Solutions",
+      description: "Modern systems tailored to your home or business needs.",
+    },
+    {
+      icon: faThumbsUp,
+      title: "Customer Satisfaction Guarantee",
+      description: "Your safety and satisfaction are our highest priorities.",
+    },
+  ];
+
   return (
     <>
       {/* MINI HEADER */}
@@ -42,11 +112,11 @@ export default function AboutPage() {
           {/* Make the header take up the remaining space */}
           <div className="z-10 flex items-center justify-center flex-grow header">
             <div className="text-center text">
-              <p className="font-bold hidden tracking-wide text-orange-400 uppercase">
+              <p className="hidden font-bold tracking-wide text-orange-400 uppercase">
                 Trusted Eagle Locksmith
               </p>
               <PageHeader>About Us</PageHeader>
-              <p className="pt-5 py-10 max-w-2xl xl:text-xl mx-auto text-gray-300">
+              <p className="max-w-2xl py-10 pt-5 mx-auto text-gray-300 xl:text-xl">
                 We want to make sure your entire process is{" "}
                 <span className="font-semibold text-white uppercase">
                   stress free
@@ -71,11 +141,11 @@ export default function AboutPage() {
       {/* CONTENT */}
       <div className="px-5 py-32 parent">
         {/* content 1 */}
-        <div className="container max-w-xl mx-auto lg:max-w-4xl text-center">
+        <div className="container max-w-xl mx-auto text-center lg:max-w-4xl">
           <SectionHeading type="small">
             Your Trusted Partner in Security
           </SectionHeading>
-          <div className="text-left flex gap-5 flex-col mt-15 text-gray-700 text-lg font-light">
+          <div className="flex flex-col gap-5 text-lg font-light text-left text-gray-700 mt-15">
             <p>
               At Eagle Locksmith, we’ve built our reputation by delivering fast,
               reliable, and professional locksmith services throughout
@@ -83,9 +153,9 @@ export default function AboutPage() {
               hands-on experience and{" "}
               <span className="italic">a passion for safety</span>, we are
               committed to protecting what matters most — your{" "}
-              <span className=" font-medium uppercase">home</span>,{" "}
-              <span className=" font-medium uppercase">business</span>, and{" "}
-              <span className=" font-medium uppercase">vehicle</span>.
+              <span className="font-medium uppercase ">home</span>,{" "}
+              <span className="font-medium uppercase ">business</span>, and{" "}
+              <span className="font-medium uppercase ">vehicle</span>.
             </p>
             <p>
               We also specialize in advanced security solutions to enhance the
@@ -104,52 +174,10 @@ export default function AboutPage() {
             </p>
 
             <div className="my-10">
-              <h3 className="text-xl font-medium text-center  text-red-700 mb-10">
+              <h3 className="mb-10 text-xl font-medium text-center text-red-700">
                 Protecting What Matters Most
               </h3>
-              <div className="grid grid-cols-1 my-5 md:grid-cols-2 gap-6 text-gray-800">
-                <IconLabelCard
-                  icon={faKey}
-                  title={`Master Key Systems`}
-                  description={`Custom-designed, professionally installed, and regularly maintained.`}
-                />
-                <IconLabelCard
-                  icon={faHome}
-                  title={`High-Security Locks`}
-                  description={`Top-tier locks for both residential and commercial protection.`}
-                />
-
-                <IconLabelCard
-                  icon={faVideo}
-                  title={`CCTV Systems`}
-                  description={`Closed-circuit video surveillance for safety and monitoring.`}
-                />
-
-                <IconLabelCard
-                  icon={faIdCard}
-                  title={`Access Control`}
-                  description={`Card-based or digital access systems for restricted areas.`}
-                />
-
-                <IconLabelCard
-                  icon={faPhone}
-                  title={`Telephone Access`}
-                  description={`Secure entry for offices and residential buildings via intercom systems.`}
-                />
-
-                <IconLabelCard
-                  icon={faCar}
-                  title={`Automotive Locks`}
-                  description={`High-security solutions for domestic and foreign vehicles.`}
-                />
-
-                <IconLabelCard
-                  icon={faVault}
-                  title={`Safes`}
-                  description={`Sales, delivery, and maintenance of commercial and
-                      residential safes.`}
-                />
-              </div>
+              <IconLabelGridContainer items={iconLabel1} />
             </div>
 
             <p>
@@ -167,14 +195,14 @@ export default function AboutPage() {
         </div>
 
         {/* content 2 */}
-        <div className="container max-w-xl mx-auto lg:max-w-4xl text-center my-32">
+        <div className="container max-w-xl mx-auto my-32 text-center lg:max-w-4xl">
           <SectionHeader
             subtitle={"Our Commitment to Your Peace of Mind"}
             title="Our Mission"
             description={""}
           />
 
-          <div className="text-left flex gap-5 flex-col mt-5 text-gray-700 text-lg font-light">
+          <div className="flex flex-col gap-5 mt-5 text-lg font-light text-left text-gray-700">
             <p>
               Our mission is simple: to provide top-tier locksmith solutions
               with honesty, integrity, and excellence. We believe that security
@@ -183,7 +211,7 @@ export default function AboutPage() {
               confident in our services.
             </p>
 
-            <div className="w-full h-96 bg-amber-300 mt-10 relative">
+            <div className="relative w-full mt-10 h-96 bg-amber-300">
               <Image
                 src={"/images/about/highview.webp"}
                 fill
@@ -203,36 +231,10 @@ export default function AboutPage() {
             </p>
 
             <div className="my-10">
-              <h3 className="text-xl font-medium text-center text-red-700 mb-10">
+              <h3 className="mb-10 text-xl font-medium text-center text-red-700">
                 What Sets Us Apart
               </h3>
-              <div className="grid text-left grid-cols-1 md:grid-cols-2 gap-6 text-gray-800">
-                <IconLabelCard
-                  icon={faClock}
-                  title="24/7 Emergency Services"
-                  description="Always available when you need us the most—day or night."
-                />
-                <IconLabelCard
-                  icon={faShieldAlt}
-                  title="Licensed & Insured Professionals"
-                  description="Certified experts providing secure and trustworthy service."
-                />
-                <IconLabelCard
-                  icon={faBolt}
-                  title="Fast Response Time"
-                  description="Rapid arrival and service to resolve your issues quickly."
-                />
-                <IconLabelCard
-                  icon={faBrain}
-                  title="Advanced Security Solutions"
-                  description="Modern systems tailored to your home or business needs."
-                />
-                <IconLabelCard
-                  icon={faThumbsUp}
-                  title="Customer Satisfaction Guarantee"
-                  description="Your safety and satisfaction are our highest priorities."
-                />
-              </div>
+              <IconLabelGridContainer items={iconLabel2} />
             </div>
 
             <p>
@@ -248,28 +250,28 @@ export default function AboutPage() {
         </div>
 
         {/* content 3 */}
-        <div className="container max-w-xl mx-auto lg:max-w-4xl text-center">
+        <div className="container max-w-xl mx-auto text-center lg:max-w-4xl">
           <SectionHeader
             subtitle="Meet Our Experts"
             title="The Team "
             description=""
           />
 
-          <div className="flex mt-5 gap-10 justify-center flex-wrap text-left">
+          <div className="flex flex-wrap justify-center gap-10 mt-5 text-left">
             <div className="">
-              <div className="w-60 h-60 bg-slate-500 rounded-lg"></div>
-              <h3 className="mt-3 font-medium text-lg">Yaniv Bangtoto</h3>
-              <p className="text-gray-700 text-sm">Chief Exutive Officer</p>
+              <div className="rounded-lg w-60 h-60 bg-slate-500"></div>
+              <h3 className="mt-3 text-lg font-medium">Yaniv Bangtoto</h3>
+              <p className="text-sm text-gray-700">Chief Exutive Officer</p>
             </div>
             <div className="">
-              <div className="w-60 h-60 bg-slate-400 rounded-lg"></div>
-              <h3 className="mt-3 font-medium text-lg">Yaniv Bangtoto</h3>
-              <p className="text-gray-700 text-sm">Chief Exutive Officer</p>
+              <div className="rounded-lg w-60 h-60 bg-slate-400"></div>
+              <h3 className="mt-3 text-lg font-medium">Yaniv Bangtoto</h3>
+              <p className="text-sm text-gray-700">Chief Exutive Officer</p>
             </div>
             <div className="">
-              <div className="w-60 h-60 bg-slate-300 rounded-lg"></div>
-              <h3 className="mt-3 font-medium text-lg">Yaniv Bangtoto</h3>
-              <p className="text-gray-700 text-sm">Chief Exutive Officer</p>
+              <div className="rounded-lg w-60 h-60 bg-slate-300"></div>
+              <h3 className="mt-3 text-lg font-medium">Yaniv Bangtoto</h3>
+              <p className="text-sm text-gray-700">Chief Exutive Officer</p>
             </div>
           </div>
         </div>
