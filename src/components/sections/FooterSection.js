@@ -14,11 +14,35 @@ import {
 import SocialItem from "../SocialItem";
 import Image from "next/image";
 import Icon from "../Icon";
+import Link from "next/link";
 
 export default function FooterSection() {
+  const serviceLinks = [
+    {
+      label: "Commercial Locksmith",
+      href: "/services/commercial-locksmith",
+    },
+    {
+      label: "Residential Locksmith",
+      href: "/services/residential-locksmith",
+    },
+    {
+      label: "Emergency Locksmith",
+      href: "/services/emergency-locksmith",
+    },
+    {
+      label: "Automotive Locksmith",
+      href: "/services/automotive-locksmith",
+    },
+    {
+      label: "Safe Locksmith",
+      href: "/services/safe-locksmith",
+    },
+  ];
+
   return (
     <footer className="px-5 py-24 text-white border-t-8 border-red-600 bg-blue">
-      <div className="container max-w-xl mx-auto lg:max-w-7xl flex flex-wrap lg:flex-nowrap justify-center lg:justify-between mb-24 gap-10">
+      <div className="container flex flex-wrap justify-center max-w-xl gap-10 mx-auto mb-24 lg:max-w-7xl lg:flex-nowrap lg:justify-between">
         {/* LOGO */}
         <div className="flex flex-col justify-center gap-5 text-center">
           {/* logo */}
@@ -33,15 +57,18 @@ export default function FooterSection() {
           <h2 className="text-4xl font-bold capitalize">Eagle Locksmith</h2>
         </div>
 
-        <div className="flex flex-wrap justify-end items-start gap-10">
+        <div className="flex flex-wrap items-start justify-end gap-10">
           {/* Service Section */}
           <div className=" lg:basis-60 basis-full sm:basis-[calc(50%-20px)]">
             <h3 className="text-3xl font-semibold">Service</h3>
             <ul className="flex flex-col gap-2 mt-5 text-gray-300">
-              <li>Residential Locksmith</li>
-              <li>Commercial Locksmith</li>
-              <li>Automotive Locksmith</li>
-              <li>Emergency Locksmith</li>
+              {serviceLinks.map((item, index) => (
+                <Link key={index} href={item.href}>
+                  <li className="cursor-pointer hover:text-red-600">
+                    {item.label}
+                  </li>
+                </Link>
+              ))}
             </ul>
           </div>
 
@@ -75,10 +102,10 @@ export default function FooterSection() {
       </div>
 
       <div className="">
-        <div className="w-6/12  mx-auto my-10 border-b-2 border-gray-500"></div>
+        <div className="w-6/12 mx-auto my-10 border-b-2 border-gray-500"></div>
 
         <div className="">
-          <ul className="flex justify-center items-center flex-col lg:flex-row w-10/12 gap-5 mx-auto  ">
+          <ul className="flex flex-col items-center justify-center w-10/12 gap-5 mx-auto lg:flex-row ">
             <SocialItem
               icon={faFacebook}
               social="Facebook"

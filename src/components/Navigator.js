@@ -34,6 +34,29 @@ export default function Navigator() {
     setIsToggleDropdown((prev) => !prev);
   };
 
+  const serviceLinks = [
+    {
+      label: "Commercial Locksmith",
+      href: "/services/commercial-locksmith",
+    },
+    {
+      label: "Residential Locksmith",
+      href: "/services/residential-locksmith",
+    },
+    {
+      label: "Emergency Locksmith",
+      href: "/services/emergency-locksmith",
+    },
+    {
+      label: "Automotive Locksmith",
+      href: "/services/automotive-locksmith",
+    },
+    {
+      label: "Safe Locksmith",
+      href: "/services/safe-locksmith",
+    },
+  ];
+
   return (
     <nav className="sticky top-0 z-20 text-white shadow-lg navigator">
       <div className="flex items-center justify-between px-5 xl:px-10 py-7 ">
@@ -64,29 +87,14 @@ export default function Navigator() {
                 <Icon icon={faAngleDown} className="inline-block w-4 ml-2" />
               </button>
               <ul className="absolute left-0 z-50 invisible w-40 text-black transition-all duration-300 bg-white rounded-md shadow-lg opacity-0 top-full group-hover:opacity-100 group-hover:visible">
-                <li className="px-4 py-2 text-lg hover:bg-gray-100">
-                  <Link href="/services/commercial-locksmith">
-                    Commercial Locksmith
-                  </Link>
-                </li>
-                <li className="px-4 py-2 text-lg hover:bg-gray-100">
-                  <Link href="/services/residential-locksmith">
-                    Residential Locksmith
-                  </Link>
-                </li>
-                <li className="px-4 py-2 text-lg hover:bg-gray-100">
-                  <Link href="/services/emergency-locksmith">
-                    Emergency Locksmith
-                  </Link>
-                </li>
-                <li className="px-4 py-2 text-lg hover:bg-gray-100">
-                  <Link href="/services/automotive-locksmith">
-                    Automotive Locksmith
-                  </Link>
-                </li>
-                <li className="px-4 py-2 text-lg hover:bg-gray-100">
-                  <Link href="/services/safe-locksmith">Safe Locksmith</Link>
-                </li>
+                {serviceLinks.map((item, index) => (
+                  <li
+                    key={index}
+                    className="px-4 py-2 text-lg hover:bg-gray-100"
+                  >
+                    <Link href={item.href}>{item.label}</Link>
+                  </li>
+                ))}
               </ul>
             </li>
 

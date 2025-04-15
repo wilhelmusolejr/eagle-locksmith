@@ -26,18 +26,12 @@ export default function ListContainer({ items, className }) {
   };
 
   return (
-    <motion.ul
-      variants={listVariants}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.3 }}
-      className={`${className}`}
-    >
+    <ul className={`${className}`}>
       {items.map((item, z) => (
-        <motion.li variants={listItemVariants} key={`list-item-${z}`}>
+        <li variants={listItemVariants} key={`list-item-${z}`}>
           {item}
-        </motion.li>
+        </li>
       ))}
-    </motion.ul>
+    </ul>
   );
 }
