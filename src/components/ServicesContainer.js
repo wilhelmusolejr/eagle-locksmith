@@ -22,9 +22,9 @@ export default function ServicesContainer() {
       path: "commercial-locksmith",
       page: {
         header: "Commercial Locksmith Services For Businesses and Offices",
-        title: "Commercial locksmith",
+        title: "Commercial Locksmith",
         description:
-          "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
+          "Secure your office or business with high-grade locks, access control systems, master key setups, and 24/7 commercial locksmith support.",
       },
     },
     // RESIDENTIAL
@@ -34,10 +34,10 @@ export default function ServicesContainer() {
       icon: faHome,
       path: "residential-locksmith",
       page: {
-        header: "Commercial Locksmith Services For Businesses and Offices",
-        title: "Residential locksmith",
+        header: "Residential Locksmith Services For Your Home Security",
+        title: "Residential Locksmith",
         description:
-          "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
+          "Protect your home with professional lock installation, rekeying, smart lock solutions, and prompt residential lockout assistance.",
       },
     },
     // EMERGENCY
@@ -47,10 +47,10 @@ export default function ServicesContainer() {
       icon: faExclamationTriangle,
       path: "emergency-locksmith",
       page: {
-        header: "Commercial Locksmith Services For Businesses and Offices",
+        header: "Fast Emergency Locksmith Services Anytime, Anywhere",
         title: "Emergency Locksmith",
         description:
-          "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
+          "Locked out? Lost keys? We’re available 24/7 to respond to urgent lock issues—quick, reliable, and just a call away.",
       },
     },
     // AUTOMOTIVE
@@ -60,10 +60,10 @@ export default function ServicesContainer() {
       icon: faCar,
       path: "automotive-locksmith",
       page: {
-        header: "Commercial Locksmith Services For Businesses and Offices",
+        header: "Automotive Locksmith Services for Cars, Trucks, and More",
         title: "Automotive Locksmith",
         description:
-          "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
+          "From car lockouts to key duplication and ignition repair, we handle all types of automotive locksmith needs efficiently and damage-free.",
       },
     },
     // SAFE
@@ -73,10 +73,10 @@ export default function ServicesContainer() {
       icon: faVault,
       path: "safe-locksmith",
       page: {
-        header: "Commercial Locksmith Services For Businesses and Offices",
+        header: "Professional Safe Locksmith Services for Homes and Offices",
         title: "Safe Locksmith",
         description:
-          "We provide a wide range of commercial locksmith services, including lock repairs, installations, and security upgrades.",
+          "We offer safe opening, combination changes, repair, and installation services to keep your valuables secure and accessible only to you.",
       },
     },
   ];
