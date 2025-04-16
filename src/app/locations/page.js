@@ -232,7 +232,7 @@ export default function LocationPage() {
                 Trusted Eagle Locksmith
               </p>
               <PageHeader>Eagle Locksmith in the DMV Area</PageHeader>
-              <p className="max-w-2xl py-10 pt-5 mx-auto text-gray-300 xl:text-xl">
+              <p className="max-w-2xl px-5 py-10 pt-5 mx-auto text-gray-300 md:px-0 xl:text-xl">
                 We want to make sure your entire process is{" "}
                 <span className="font-semibold text-white uppercase">
                   stress free

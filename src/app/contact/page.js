@@ -49,7 +49,7 @@ export default function ContactPage() {
                 Get in Touch
               </p>
               <PageHeader>Contact Us!</PageHeader>
-              <p className="max-w-2xl py-10 pt-5 mx-auto text-gray-300 xl:text-xl">
+              <p className="max-w-2xl px-5 py-10 pt-5 mx-auto text-gray-300 md:px-0 xl:text-xl">
                 {`We're here to help you with any locksmith needs—day or night.
                 Reach out and our team will respond promptly.`}
               </p>

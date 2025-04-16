@@ -711,7 +711,7 @@ export default async function ServicePage({ params }) {
               <h1 className="mx-auto text-5xl font-bold capitalize xl:text-7xl md:leading-normal">
                 {service.page.title}
               </h1>
-              <p className="max-w-2xl py-10 pt-5 mx-auto text-gray-300 xl:text-xl">
+              <p className="max-w-2xl px-5 py-10 pt-5 mx-auto text-gray-300 md:px-0 xl:text-xl">
                 {service.page.description}
               </p>
 

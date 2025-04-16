@@ -33,7 +33,7 @@ export default async function Home() {
               <h1 className="mx-auto text-5xl font-bold capitalize xl:text-7xl xl:w-10/12 md:leading-normal">
                 Protecting homes and businesses
               </h1>
-              <p className="max-w-2xl py-10 pt-5 mx-auto text-gray-300 xl:text-xl">
+              <p className="max-w-2xl px-5 py-10 pt-5 mx-auto text-gray-300 md:px-0 xl:text-xl">
                 We want to make sure your entire process is{" "}
                 <span className="font-semibold text-white uppercase">
                   stress free
