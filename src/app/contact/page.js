@@ -45,18 +45,18 @@ export default function ContactPage() {
         <div className="flex flex-col h-[50vh] text-white bg-[url('/images/contact/background.jpg')] bg-cover bg-center bg-no-repeat black-overlay">
           <div className="z-10 flex items-center justify-center flex-grow header">
             <div className="text-center text">
-              <p className="font-bold hidden tracking-wide text-orange-400 uppercase">
+              <p className="hidden font-bold tracking-wide text-orange-400 uppercase">
                 Get in Touch
               </p>
               <PageHeader>Contact Us!</PageHeader>
-              <p className="pt-5 py-10 max-w-2xl xl:text-xl mx-auto text-gray-300">
-                We're here to help you with any locksmith needs—day or night.
-                Reach out and our team will respond promptly.
+              <p className="max-w-2xl py-10 pt-5 mx-auto text-gray-300 xl:text-xl">
+                {`We're here to help you with any locksmith needs—day or night.
+                Reach out and our team will respond promptly.`}
               </p>
-              <div className="cta flex items-center justify-center">
+              <div className="flex items-center justify-center cta">
                 <a
                   href="tel:8556332453"
-                  className="bg-red-700 font-bold rounded-lg uppercase md:text-2xl shadow-lg flex items-center"
+                  className="flex items-center font-bold uppercase bg-red-700 rounded-lg shadow-lg md:text-2xl"
                 >
                   <div className="p-3 bg-red-800 rounded-lg ">
                     <FontAwesomeIcon icon={faPhone} className="w-7" />
@@ -71,10 +71,10 @@ export default function ContactPage() {
 
       {/* CONTACT CONTENT */}
       <div className="px-5 py-32">
-        <div className="container max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="container grid max-w-5xl grid-cols-1 gap-10 mx-auto md:grid-cols-2">
           {/* Contact Info */}
-          <div className="text-left text-gray-700 text-lg font-light">
-            <h2 className="text-3xl font-bold mb-6 text-red-700">
+          <div className="text-lg font-light text-left text-gray-700">
+            <h2 className="mb-6 text-3xl font-bold text-red-700">
               Contact Information
             </h2>
             <p className="mb-4">
@@ -85,7 +85,7 @@ export default function ContactPage() {
             <ul className="space-y-3">
               <li>
                 <strong>Phone:</strong>{" "}
-                <a href="tel:8556332453" className="text-red-700 font-medium">
+                <a href="tel:8556332453" className="font-medium text-red-700">
                   855-633-2453
                 </a>
               </li>
@@ -93,7 +93,7 @@ export default function ContactPage() {
                 <strong>Email:</strong>{" "}
                 <a
                   href="mailto:support@eaglelocksmith.com"
-                  className="text-red-700 font-medium"
+                  className="font-medium text-red-700"
                 >
                   support@eaglelocksmith.com
                 </a>
@@ -108,8 +108,8 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mb-4 text-gray-800">
+          <div className="p-6 bg-gray-100 rounded-lg shadow-md">
+            <h2 className="mb-4 text-2xl font-bold text-gray-800">
               Send Us a Message
             </h2>
             <form className="flex flex-col gap-4">
@@ -135,7 +135,7 @@ export default function ContactPage() {
               ></textarea>
               <button
                 type="submit"
-                className="bg-red-700 text-white uppercase font-bold py-3 rounded hover:bg-red-800 transition"
+                className="py-3 font-bold text-white uppercase transition bg-red-700 rounded hover:bg-red-800"
               >
                 Send Message
               </button>
