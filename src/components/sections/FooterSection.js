@@ -110,18 +110,31 @@ export default function FooterSection() {
               icon={faFacebook}
               social="Facebook"
               color="bg-blue-600"
+              link="https://web.facebook.com/profile.php?id=100064599526035&_rdc=1&_rdr#"
             />
-            <SocialItem icon={faTwitter} social="Twitter" color="bg-sky-400" />
-            <SocialItem icon={faYelp} social="Yelp" color="bg-red-500" />
+            <SocialItem
+              icon={faTwitter}
+              social="Twitter"
+              color="bg-sky-400"
+              link="https://x.com/yaniv_asayag/status/1833939952352063586?s=46&t=jpszYDQJlBQdHkezj2jsqQ"
+            />
+            <SocialItem
+              icon={faYelp}
+              social="Yelp"
+              color="bg-red-500"
+              link="https://www.yelp.com/biz/eagle-services-beltsville-5?utm_source=ishare"
+            />
             <SocialItem
               icon={faLinkedinIn}
               social="Commercial"
               color="bg-blue-500"
+              link="https://www.linkedin.com/in/yaniv-asayag-1139aa9b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
             />
             <SocialItem
               icon={faTumblr}
               social="Residential"
               color="bg-gray-500"
+              link="https://www.tumblr.com/eaglelocksmith"
             />
           </ul>
         </div>
