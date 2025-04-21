@@ -21,7 +21,6 @@ import MapSection from "@/components/sections/MapSection";
 import FooterSection from "@/components/sections/FooterSection";
 import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
-import IconLabelCard from "@/components/IconLabelCard";
 import ButtonCallUsWithNum from "@/components/ButtonCallUsWithNum";
 import PageHeader from "@/components/PageHeader";
 import IconLabelGridContainer from "@/components/IconLabelGridContainer";

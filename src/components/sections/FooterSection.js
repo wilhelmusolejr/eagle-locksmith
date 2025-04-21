@@ -105,7 +105,7 @@ export default function FooterSection() {
         <div className="w-6/12 mx-auto my-10 border-b-2 border-gray-500"></div>
 
         <div className="">
-          <ul className="flex flex-col items-center justify-center w-10/12 gap-5 mx-auto lg:flex-row ">
+          <ul className="flex flex-col items-center justify-center w-10/12 gap-10 mx-auto lg:gap-5 lg:flex-row ">
             <SocialItem
               icon={faFacebook}
               social="Facebook"
