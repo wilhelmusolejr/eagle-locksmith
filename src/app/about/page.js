@@ -25,6 +25,12 @@ import ButtonCallUsWithNum from "@/components/ButtonCallUsWithNum";
 import PageHeader from "@/components/PageHeader";
 import IconLabelGridContainer from "@/components/IconLabelGridContainer";
 
+export const metadata = {
+  title: "About Us | Eagle Locksmith",
+  description:
+    "Learn more about Eagle Locksmith, our values, and the services we provide.",
+};
+
 export default function AboutPage() {
   const iconLabel1 = [
     {

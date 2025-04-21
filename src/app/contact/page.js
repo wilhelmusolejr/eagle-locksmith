@@ -1,35 +1,17 @@
 // app/about/page.js
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBuilding,
-  faCheckDouble,
-  faHome,
-  faPhone,
-  faExclamationTriangle,
-  faCar,
-  faVault,
-  faKey,
-  faLock,
-  faVideo,
-  faIdCard,
-  faBox,
-  faClock,
-  faShieldAlt,
-  faBolt,
-  faBrain,
-  faThumbsUp,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import Navigator from "@/components/Navigator";
 import MiniHeader from "@/components/MiniHeader";
-import Link from "next/link";
-import SectionHeading from "@/components/SectionHeading";
 import MapSection from "@/components/sections/MapSection";
 import FooterSection from "@/components/sections/FooterSection";
-import Icon from "@/components/Icon";
-import Image from "next/image";
-import SectionHeader from "@/components/SectionHeader";
-import IconLabelCard from "@/components/IconLabelCard";
 import PageHeader from "@/components/PageHeader";
+
+export const metadata = {
+  title: "Contact Us | Eagle Locksmith",
+  description:
+    "Get in touch with Eagle Locksmith for fast, reliable locksmith services. Call us, send a message, or find our location—we’re here to help 24/7.",
+};
 
 export default function ContactPage() {
   return (

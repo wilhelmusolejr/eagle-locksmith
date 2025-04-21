@@ -11,6 +11,12 @@ import PageHeader from "@/components/PageHeader";
 import ButtonCallUsWithNum from "@/components/ButtonCallUsWithNum";
 import ListContainer from "@/components/ListContainer";
 
+export const metadata = {
+  title: "Our Locations | Eagle Locksmith",
+  description:
+    "Find Eagle Locksmith service areas near you. We proudly serve multiple locations with fast, reliable, and professional locksmith solutions.",
+};
+
 export default function LocationPage() {
   const locations = [
     "Deale",

@@ -13,6 +13,12 @@ import ButtonCallUsWithNum from "@/components/ButtonCallUsWithNum";
 import AdvancedContainer from "@/components/AdvancedContainer";
 import ServicesContainer from "@/components/ServicesContainer";
 
+export const metadata = {
+  title: "Secure Your Home & Business | Eagle Locksmith",
+  description:
+    "Eagle Locksmith provides fast, professional, and reliable locksmith services for homes, businesses, and vehicles in Washington D.C., Maryland, and Northern Virginia. Your security is our top priority.",
+};
+
 export default async function Home() {
   return (
     <>
