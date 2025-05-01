@@ -305,7 +305,7 @@ export default function LocationPage() {
               </div>
             ))}
 
-            <div className="w-full h-[600px] bg-amber-300 mt-10 relative shadow-lg rounded-lg">
+            <div className="w-full h-[600px] bg-gray-300 mt-10 relative shadow-lg rounded-lg">
               <Image
                 src={"/images/locations/van.webp"}
                 fill
