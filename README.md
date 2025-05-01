@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Eagle Locksmith – Website Revamp
 
-## Getting Started
+![Project Banner](public/images/github/banner.webp)
 
-First, run the development server:
+## 📌 Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project is a complete redesign and restructuring project for the original [Eagle Locksmith Service](https://www.eaglelocksmithservice.com/) website. The goal was to modernize the look and feel, enhance the user experience, and build a responsive and accessible interface that adapts seamlessly across devices.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔗 **Project demo:** [https://eagle-locksmith.vercel.app](https://eagle-locksmith.vercel.app)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Features
 
-## Learn More
+- ✅ Revamped UI/UX design
+- 📱 Fully responsive layout for mobile and desktop
+- 🧭 Improved content structure and flow
+- ♿ Enhanced accessibility for all users
+- ⚙️ Built with **Next.js** for optimized performance
+- 🔍 SEO-ready setup
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Frontend & Design:**
 
-## Deploy on Vercel
+- HTML
+- CSS
+- JavaScript
+- Tailwind CSS
+- Next.js
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Design Tools:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Figma
+- Adobe Photoshop
+
+---
+
+## 🖼️ Screenshots
+
+| ![screenshot1](public/images/github/screenshot1.png) | ![screenshot2](public/images/github/screenshot2.png) |
+| :--------------------------------------------------: | :--------------------------------------------------: |
+| ![screenshot3](public/images/github/screenshot3.png) | ![screenshot4](public/images/github/screenshot4.png) |
+| ![screenshot5](public/images/github/screenshot5.png) | ![screenshot6](public/images/github/screenshot6.png) |
+
+---
+
+## 📁 Project Type
+
+- 🎨 Design
+- 💻 Development
+
+---
+
+## 📂 Tags
+
+- `website-revamp`
+- `UI/UX-design`
+- `content-restructuring`
+- `responsive-design`
+- `modern-framework`
+
+## 🙋‍♂️ About the Developer
+
+Hi! I’m **Wilhelmus**, a Full Stack Web Developer and Web Designer passionate about building impactful digital experiences.
+
+- [Portfolio](https://wilhelmus.vercel.app/?ref=github_eaglelocksmith)
+- [LinkedIn](https://www.linkedin.com/in/wilhelmusolejr/)
+
+---
