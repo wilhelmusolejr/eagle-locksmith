@@ -4,9 +4,9 @@
 
 ## 📌 Overview
 
-This project is a complete redesign and restructuring project for the original [Eagle Locksmith Service](https://www.eaglelocksmithservice.com/) website. The goal was to modernize the look and feel, enhance the user experience, and build a responsive and accessible interface that adapts seamlessly across devices.
+This project is a complete redesign and restructuring project for the original Eagle Locksmith Service website. The goal was to modernize the look and feel, enhance the user experience, and build a responsive and accessible interface that adapts seamlessly across devices.
 
-🔗 **Project demo:** [https://eagle-locksmith.vercel.app](https://eagle-locksmith.vercel.app)
+🔗 **Live Demo:** <a href="https://eagle-locksmith.vercel.app/" target="_blank">https://eagle-locksmith.vercel.app</a>
 
 ---
 
@@ -66,7 +66,5 @@ This project is a complete redesign and restructuring project for the original [
 
 Hi! I’m **Wilhelmus**, a Full Stack Web Developer and Web Designer passionate about building impactful digital experiences.
 
-- [Portfolio](https://wilhelmus.vercel.app/?ref=github_eaglelocksmith)
-- [LinkedIn](https://www.linkedin.com/in/wilhelmusolejr/)
-
----
+- <a href="https://wilhelmus.vercel.app/?ref=github_eaglelocksmith" target="_blank">Portfolio</a>
+- <a href="https://www.linkedin.com/in/wilhelmusolejr/" target="_blank">LinkedIn</a>
