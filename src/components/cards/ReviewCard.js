@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "./Icon";
+import Icon from "../ui/Icon";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 export default function ReviewCard({ desription, name, link }) {

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import Icon from "./Icon";
+import Icon from "../ui/Icon";
 
 export default function AdvancedItem({ icon, paragraph }) {
   const itemVariant = {

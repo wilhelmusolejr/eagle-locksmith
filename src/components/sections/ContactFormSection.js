@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import LabelInput from "../LabelInput";
-import Icon from "../Icon";
-import SectionHeading from "../SectionHeading";
+import LabelInput from "../ui/LabelInput";
+import Icon from "../ui/Icon";
+import SectionHeading from "../ui/SectionHeading";
 
 import {
   faEnvelope,

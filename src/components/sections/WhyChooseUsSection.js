@@ -1,6 +1,6 @@
 import React from "react";
-import SectionHeading from "../SectionHeading";
-import WhyCard from "../WhyCard";
+import SectionHeading from "../ui/SectionHeading";
+import WhyCard from "../cards/WhyCard";
 
 import {
   faClock,

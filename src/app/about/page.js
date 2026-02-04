@@ -14,16 +14,16 @@ import {
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
 
-import Navigator from "@/components/Navigator";
-import MiniHeader from "@/components/MiniHeader";
-import SectionHeading from "@/components/SectionHeading";
+import Navigator from "@/components/layout/Navigator";
+import MiniHeader from "@/components/layout/MiniHeader";
+import SectionHeading from "@/components/ui/SectionHeading";
 import MapSection from "@/components/sections/MapSection";
 import FooterSection from "@/components/sections/FooterSection";
 import Image from "next/image";
-import SectionHeader from "@/components/SectionHeader";
-import ButtonCallUsWithNum from "@/components/ButtonCallUsWithNum";
-import PageHeader from "@/components/PageHeader";
-import IconLabelGridContainer from "@/components/IconLabelGridContainer";
+import SectionHeader from "@/components/ui/SectionHeader";
+import ButtonCallUsWithNum from "@/components/ui/ButtonCallUsWithNum";
+import PageHeader from "@/components/ui/PageHeader";
+import IconLabelGridContainer from "@/components/cards/IconLabelGridContainer";
 
 export const metadata = {
   title: "About Us | Eagle Locksmith",

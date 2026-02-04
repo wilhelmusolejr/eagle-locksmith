@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  faBuilding,
-  faHome,
-  faExclamationTriangle,
-  faCar,
-  faVault,
-} from "@fortawesome/free-solid-svg-icons";
+import { Building2, House, TriangleAlert, Car, Lock } from "lucide-react";
 
 import ServiceCard from "./ServiceCard";
 
@@ -18,7 +12,7 @@ export default function ServicesContainer() {
     {
       image_path: "/images/services/commercial.jpg",
       image_alt: "Commercial image",
-      icon: faBuilding,
+      icon: Building2,
       path: "commercial-locksmith",
       page: {
         header: "Commercial Locksmith Services For Businesses and Offices",
@@ -31,7 +25,7 @@ export default function ServicesContainer() {
     {
       image_path: "/images/services/residential.jpg",
       image_alt: "Residential image",
-      icon: faHome,
+      icon: House,
       path: "residential-locksmith",
       page: {
         header: "Residential Locksmith Services For Your Home Security",
@@ -44,7 +38,7 @@ export default function ServicesContainer() {
     {
       image_path: "/images/services/emergency.jpg",
       image_alt: "Emergency image",
-      icon: faExclamationTriangle,
+      icon: TriangleAlert,
       path: "emergency-locksmith",
       page: {
         header: "Fast Emergency Locksmith Services Anytime, Anywhere",
@@ -57,7 +51,7 @@ export default function ServicesContainer() {
     {
       image_path: "/images/services/automotive.jpg",
       image_alt: "Automotive image",
-      icon: faCar,
+      icon: Car,
       path: "automotive-locksmith",
       page: {
         header: "Automotive Locksmith Services for Cars, Trucks, and More",
@@ -70,7 +64,7 @@ export default function ServicesContainer() {
     {
       image_path: "/images/services/safe.jpg",
       image_alt: "Safe image",
-      icon: faVault,
+      icon: Lock,
       path: "safe-locksmith",
       page: {
         header: "Professional Safe Locksmith Services for Homes and Offices",
@@ -96,7 +90,7 @@ export default function ServicesContainer() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0 }}
-      className="flex flex-wrap justify-center gap-7 "
+      className="grid grid-cols-3 gap-10"
     >
       {/* card */}
       {servicesList.map((service, index) => (

@@ -1,11 +1,11 @@
 // app/about/page.js
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import Navigator from "@/components/Navigator";
-import MiniHeader from "@/components/MiniHeader";
+import Navigator from "@/components/layout/Navigator";
+import MiniHeader from "@/components/layout/MiniHeader";
 import MapSection from "@/components/sections/MapSection";
 import FooterSection from "@/components/sections/FooterSection";
-import PageHeader from "@/components/PageHeader";
+import PageHeader from "@/components/ui/PageHeader";
 
 export const metadata = {
   title: "Contact Us | Eagle Locksmith",

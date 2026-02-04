@@ -32,9 +32,9 @@ import {
   faMicrochip,
   faGears,
 } from "@fortawesome/free-solid-svg-icons";
-import MiniHeader from "@/components/MiniHeader";
-import Navigator from "@/components/Navigator";
-import SectionHeading from "@/components/SectionHeading";
+import MiniHeader from "@/components/layout/MiniHeader";
+import Navigator from "@/components/layout/Navigator";
+import SectionHeading from "@/components/ui/SectionHeading";
 import BannerSection from "@/components/sections/BannerSection";
 import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
 import ReviewsSection from "@/components/sections/ReviewsSection";
@@ -42,13 +42,13 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
 import MapSection from "@/components/sections/MapSection";
 import FooterSection from "@/components/sections/FooterSection";
 import Link from "next/link";
-import IconLabelCard from "@/components/IconLabelCard";
-import SectionHeader from "@/components/SectionHeader";
-import ButtonCallUsToday from "@/components/ButtonCallUsToday";
+import IconLabelCard from "@/components/cards/IconLabelCard";
+import SectionHeader from "@/components/ui/SectionHeader";
+import ButtonCallUsToday from "@/components/ui/ButtonCallUsToday";
 import Image from "next/image";
-import ButtonCallUsWithNum from "@/components/ButtonCallUsWithNum";
-import ListContainer from "@/components/ListContainer";
-import IconLabelGridContainer from "@/components/IconLabelGridContainer";
+import ButtonCallUsWithNum from "@/components/ui/ButtonCallUsWithNum";
+import ListContainer from "@/components/cards/ListContainer";
+import IconLabelGridContainer from "@/components/cards/IconLabelGridContainer";
 
 let servicesList = [
   // COMMERCIAL

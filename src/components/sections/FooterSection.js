@@ -11,9 +11,9 @@ import {
   faTwitter,
   faYelp,
 } from "@fortawesome/free-brands-svg-icons";
-import SocialItem from "../SocialItem";
+import SocialItem from "../ui/SocialItem";
 import Image from "next/image";
-import Icon from "../Icon";
+import Icon from "../ui/Icon";
 import Link from "next/link";
 
 export default function FooterSection() {

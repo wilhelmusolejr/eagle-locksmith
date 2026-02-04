@@ -1,5 +1,5 @@
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import BannerItem from "../BannerItem";
+import BannerItem from "../cards/BannerItem";
 
 export default function BannerSection() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
-import Logo from "./Logo";
-import Icon from "./Icon";
+import Logo from "../ui/Logo";
+import Icon from "../ui/Icon";
 import {
   faAngleDown,
   faBars,

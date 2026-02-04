@@ -1,15 +1,15 @@
 // app/about/page.js
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import Navigator from "@/components/Navigator";
-import MiniHeader from "@/components/MiniHeader";
-import SectionHeading from "@/components/SectionHeading";
+import Navigator from "@/components/layout/Navigator";
+import MiniHeader from "@/components/layout/MiniHeader";
+import SectionHeading from "@/components/ui/SectionHeading";
 import MapSection from "@/components/sections/MapSection";
 import FooterSection from "@/components/sections/FooterSection";
-import Icon from "@/components/Icon";
+import Icon from "@/components/ui/Icon";
 import Image from "next/image";
-import PageHeader from "@/components/PageHeader";
-import ButtonCallUsWithNum from "@/components/ButtonCallUsWithNum";
-import ListContainer from "@/components/ListContainer";
+import PageHeader from "@/components/ui/PageHeader";
+import ButtonCallUsWithNum from "@/components/ui/ButtonCallUsWithNum";
+import ListContainer from "@/components/cards/ListContainer";
 
 export const metadata = {
   title: "Our Locations | Eagle Locksmith",

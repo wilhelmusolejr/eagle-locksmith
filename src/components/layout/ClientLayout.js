@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import Loader from "./Loader";
+import Loader from "../ui/Loader";
 
 export default function ClientLayout({ children }) {
   const pathname = usePathname();

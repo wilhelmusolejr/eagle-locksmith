@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import Icon from "../Icon";
+import Icon from "../ui/Icon";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import ReviewImageBg from "./ReviewImageBg";
-import ReviewCard from "../ReviewCard";
+import ReviewCard from "../cards/ReviewCard";
 
 export default function ReviewsSection() {
   const reviews_user = [

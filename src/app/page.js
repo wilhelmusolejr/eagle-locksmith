@@ -1,17 +1,17 @@
 import Image from "next/image";
-import SectionHeader from "@/components/SectionHeader";
-import SectionHeading from "@/components/SectionHeading";
-import MiniHeader from "@/components/MiniHeader";
-import Navigator from "@/components/Navigator";
+import SectionHeader from "@/components/ui/SectionHeader";
+import SectionHeading from "@/components/ui/SectionHeading";
+import MiniHeader from "@/components/layout/MiniHeader";
+import Navigator from "@/components/layout/Navigator";
 import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
 import BannerSection from "@/components/sections/BannerSection";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import MapSection from "@/components/sections/MapSection";
 import FooterSection from "@/components/sections/FooterSection";
-import ButtonCallUsWithNum from "@/components/ButtonCallUsWithNum";
-import AdvancedContainer from "@/components/AdvancedContainer";
-import ServicesContainer from "@/components/ServicesContainer";
+import ButtonCallUsWithNum from "@/components/ui/ButtonCallUsWithNum";
+import AdvancedContainer from "@/components/cards/AdvancedContainer";
+import ServicesContainer from "@/components/cards/ServicesContainer";
 
 export const metadata = {
   title: "Secure Your Home & Business | Eagle Locksmith",
@@ -36,10 +36,10 @@ export default async function Home() {
               <p className="font-bold tracking-wide text-orange-400 uppercase">
                 Trusted Eagle Locksmith
               </p>
-              <h1 className="mx-auto text-5xl font-bold capitalize xl:text-7xl xl:w-10/12 md:leading-normal">
+              <h1 className="mx-auto text-5xl font-bold capitalize md:text-6xl xl:text-7xl xl:w-10/12 md:leading-normal">
                 Protecting homes and businesses
               </h1>
-              <p className="max-w-2xl px-5 py-10 pt-5 mx-auto text-gray-300 md:px-0 xl:text-xl">
+              <p className="max-w-2xl px-5 py-10 pt-5 mx-auto text-gray-300 md:px-0 xl:text-xl leading-relaxed">
                 We want to make sure your entire process is{" "}
                 <span className="font-semibold text-white uppercase">
                   stress free
@@ -62,16 +62,16 @@ export default async function Home() {
       </header>
 
       {/* INFORMATION */}
-      <div className="px-5 py-32 parent ">
+      <div className="px-5 py-20 parent">
         {/* container */}
-        <div className="container flex flex-col items-center max-w-xl gap-10 mx-auto lg:flex-row lg:max-w-4xl">
+        <div className="container flex flex-col items-center max-w-xl gap-10 mx-auto lg:flex-row lg:max-w-5xl">
           {/* left */}
-          <div className="lg:w-1/3 w-full h-96 lg:h-[500px] mx-auto relative flex-shrink-0 flex items-center justify-center">
+          <div className="lg:w-1/3 w-full h-96 lg:h-[400px] mx-auto relative flex-shrink-0 flex items-center justify-center">
             <Image
               src="/images/locksmith.jpg"
               fill
               alt="Example"
-              className="object-contain"
+              className="object-cover rounded-lg"
             />
           </div>
           {/* right */}
@@ -79,11 +79,11 @@ export default async function Home() {
             <SectionHeading type="small">
               Eagle locksmith services
             </SectionHeading>
-            <p className="pt-2 text-lg font-medium text-blue-800">
+            <p className="pt-2 text-lg font-medium text-[var(--blue)]">
               Get the best quality security solutions for all your lock and
               key-related issues with us in Maryland, DC And Virginia.
             </p>
-            <p className="font-light py-7 text-slate-800">
+            <p className="font-normal py-7 text-gray-700 leading-relaxed">
               You have come on the right place if you are looking for a leading
               and licensed lockout service provider. We offer the best quality
               security solutions for your residential, commercial, and auto
@@ -101,8 +101,8 @@ export default async function Home() {
       <WhyChooseUsSection />
 
       {/* LIST SERVICES */}
-      <div className="px-5 py-32 parent">
-        <div className="container max-w-xl mx-auto lg:max-w-7xl ">
+      <div className="px-5 py-20 parent">
+        <div className="container max-w-xl mx-auto lg:max-w-7xl">
           {/* text */}
           <SectionHeader
             subtitle={"Your Trusted Security Partner"}
@@ -123,8 +123,8 @@ export default async function Home() {
       <ReviewsSection />
 
       {/* ADVANCED SECURITY SOLUTIONS */}
-      <div className="px-5 py-32 parent">
-        <div className="container max-w-xl mx-auto lg:max-w-4xl ">
+      <div className="px-5 py-20 parent">
+        <div className="container max-w-xl mx-auto lg:max-w-5xl">
           {/* text */}
           <SectionHeader
             subtitle={"Reliable and Professional Locksmith Services"}

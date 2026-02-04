@@ -1,4 +1,4 @@
-import Icon from "./Icon";
+import Icon from "../ui/Icon";
 
 import { faClock, faPhone } from "@fortawesome/free-solid-svg-icons";
 
