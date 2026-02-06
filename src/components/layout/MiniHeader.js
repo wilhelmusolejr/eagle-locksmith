@@ -5,7 +5,7 @@ import { faClock, faPhone } from "@fortawesome/free-solid-svg-icons";
 export default function MiniHeader() {
   return (
     <div className="p-5 xl:px-10 mini-header text-blue">
-      <div className="flex flex-col lg:flex-row justify-between items-center ">
+      <div className="flex flex-col lg:flex-row-reverse justify-between items-center ">
         {/* left */}
         <div className="flex flex-wrap gap-5 uppercase ">
           <div className="flex items-center justify-center lg:justify-start gap-2 ">
@@ -24,9 +24,10 @@ export default function MiniHeader() {
         </div>
 
         {/* right */}
+        {/* right */}
         <div className="flex items-center justify-center text-center">
           <p className="font-semibold uppercase ">
-            We Provide fast, reliable and affordable locksmith services.
+            We Provide fast, reliable and affordable locksmith services
           </p>
         </div>
       </div>

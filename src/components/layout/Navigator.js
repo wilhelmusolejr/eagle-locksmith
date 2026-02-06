@@ -59,10 +59,10 @@ export default function Navigator() {
 
   return (
     <nav className="sticky top-0 z-20 text-white shadow-lg navigator">
-      <div className="flex items-center justify-between px-5 xl:px-10 py-7 ">
+      <div className="flex items-center justify-between px-5 xl:px-10 py-5  ">
         <div className="flex gap-10">
           {/* LOGO */}
-          <Logo size={70} className="w-fit" />
+          <Logo size={50} className="w-fit" />
 
           <ul className="items-center hidden gap-5 text-xl font-light capitalize lg:flex">
             <li
