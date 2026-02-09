@@ -25,6 +25,7 @@ export default function MiniHeader() {
 
         {/* right */}
         {/* right */}
+        {/* right */}
         <div className="flex items-center justify-center text-center">
           <p className="font-semibold uppercase ">
             We Provide fast, reliable and affordable locksmith services
